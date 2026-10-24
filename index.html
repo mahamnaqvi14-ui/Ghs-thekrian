@@ -1,0 +1,1954 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title id="docTitle">Govt. High School Thekrian | Official Web Portal</title>
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        navy: {
+                            800: '#1e293b',
+                            900: '#0f172a',
+                            950: '#090d16',
+                        },
+                        royal: {
+                            600: '#2563eb',
+                            700: '#1d4ed8',
+                            800: '#1e3a8a',
+                            900: '#172554',
+                        },
+                        gold: {
+                            300: '#fde047',
+                            400: '#facc15',
+                            500: '#eab308',
+                            600: '#ca8a04',
+                            700: '#a16207',
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        serif: ['Playfair Display', 'serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <!-- Custom CSS Styling -->
+    <style>
+        .gold-gradient-text {
+            background: linear-gradient(135deg, #FCD34D 0%, #F59E0B 50%, #D97706 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .gold-gradient-bg {
+            background: linear-gradient(135deg, #F59E0B 0%, #D97706 100%);
+        }
+        .navy-gradient-bg {
+            background: linear-gradient(135deg, #0f172a 0%, #1e3a8a 100%);
+        }
+        .custom-scrollbar::-webkit-scrollbar {
+            width: 6px;
+        }
+        .custom-scrollbar::-webkit-scrollbar-track {
+            background: #0f172a;
+        }
+        .custom-scrollbar::-webkit-scrollbar-thumb {
+            background: #ca8a04;
+            border-radius: 4px;
+        }
+    </style>
+<style>@media print{body *{visibility:hidden!important}#resultOutput,#resultOutput *{visibility:visible!important}#resultOutput{position:absolute;left:0;top:0;width:100%;border:1px solid #999!important;background:white!important}button,nav,footer{display:none!important}}</style>
+    <!-- EmailJS: sends Contact School Administration form submissions -->
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script>
+        window.addEventListener('DOMContentLoaded', function () {
+            if (window.emailjs) emailjs.init({ publicKey: 'ShqgbNiCtFc-S0e8c' });
+        });
+    </script>
+</head>
+<body class="bg-slate-50 text-slate-800 font-sans antialiased flex flex-col min-h-screen">
+
+    <!-- Top Bar -->
+    <div class="bg-navy-950 text-slate-300 border-b border-gold-500/30 text-xs py-2.5 px-4 sm:px-8 sticky top-0 z-50 shadow-md">
+        <div class="max-w-7xl mx-auto flex flex-col sm:flex-row justify-between items-center gap-2">
+            <div class="flex flex-wrap items-center gap-4 sm:gap-6 justify-center sm:justify-start">
+                <a href="tel:0544631921" id="topPhoneLink" class="hover:text-gold-400 transition-colors flex items-center gap-1.5 cursor-pointer">
+                    <i class="fa-solid fa-phone text-gold-400"></i> <span class="phone-text">(0544) 631921</span>
+                </a>
+                <a href="https://mail.google.com/mail/?view=cm&amp;fs=1&amp;to=ghsdina%40gmail.com" id="topEmailLink" class="hover:text-gold-400 transition-colors flex items-center gap-1.5 cursor-pointer">
+                    <i class="fa-solid fa-envelope text-gold-400"></i> <span class="email-text">ghsdina@gmail.com</span>
+                </a>
+                <span class="hidden md:inline-flex items-center gap-1.5 text-slate-400">
+                    <i class="fa-solid fa-location-dot text-gold-400"></i> <span class="address-text">Miana Mohallah, Dina, Jhelum</span>
+                </span>
+                <span class="hidden lg:inline-flex items-center gap-1.5 text-slate-400">
+                    <i class="fa-solid fa-id-badge text-gold-400"></i> EMIS: <span class="emis-text">37240022</span>
+                </span>
+            </div>
+            <div class="flex items-center gap-3">
+                <a href="#get-in-touch" class="text-gold-400 hover:text-white transition-colors flex items-center gap-1 font-semibold">
+                    <i class="fa-solid fa-headset text-xs"></i> Helpline
+                </a>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Navigation Header -->
+    <header class="bg-navy-900/95 backdrop-blur-md border-b border-gold-500/30 shadow-lg relative z-40">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                
+                <!-- School Logo & Title -->
+                <a href="#home" class="flex items-center gap-3 group">
+                    <div class="w-12 h-12 rounded-full bg-navy-800 border-2 border-gold-400 flex items-center justify-center text-gold-400 font-bold text-xl shadow-md group-hover:scale-105 transition-transform">
+                        <i class="fa-solid fa-graduation-cap"></i>
+                    </div>
+                    <div>
+                        <h1 class="school-title font-serif font-bold text-base sm:text-xl text-white tracking-wide group-hover:text-gold-300 transition-colors">
+                            GOVT. HIGH SCHOOL THEKRIAN
+                        </h1>
+                        <p class="school-tagline text-xs text-gold-400 tracking-wider font-semibold">DISTRICT JHELUM • ESTD 1926</p>
+                    </div>
+                </a>
+
+                <!-- Desktop Nav Navigation -->
+                <nav class="hidden lg:flex items-center space-x-1 xl:space-x-2">
+                    <a href="#home" class="px-3 py-2 rounded-md text-sm font-medium text-white hover:text-gold-400 hover:bg-navy-800 transition-all">Home</a>
+                    <a href="#attendance" class="px-3 py-2 rounded-md text-sm font-medium text-slate-300 hover:text-gold-400 hover:bg-navy-800 transition-all">Attendance</a>
+                    <a href="#notices" class="px-3 py-2 rounded-md text-sm font-medium text-slate-300 hover:text-gold-400 hover:bg-navy-800 transition-all">Notices</a>
+                    <a href="#staff" class="px-3 py-2 rounded-md text-sm font-medium text-gold-400 font-bold hover:bg-navy-800 transition-all flex items-center gap-1">
+                        <i class="fa-solid fa-users text-xs"></i> Staff Directory
+                    </a>
+                    <a href="#results" class="px-3 py-2 rounded-md text-sm font-medium text-slate-300 hover:text-gold-400 hover:bg-navy-800 transition-all">Results</a>
+                    <a href="#gallery" class="px-3 py-2 rounded-md text-sm font-medium text-slate-300 hover:text-gold-400 hover:bg-navy-800 transition-all">Gallery</a>
+                    <a href="#facilities" class="px-3 py-2 rounded-md text-sm font-medium text-slate-300 hover:text-gold-400 hover:bg-navy-800 transition-all">Facilities</a>
+                    <a href="#location" class="px-3 py-2 rounded-md text-sm font-medium text-slate-300 hover:text-gold-400 hover:bg-navy-800 transition-all">Map</a>
+                    <a href="#get-in-touch" class="ml-2 px-4 py-2 rounded-md text-sm font-bold bg-gradient-to-r from-gold-500 to-gold-600 text-navy-950 hover:from-gold-400 hover:to-gold-500 shadow-md transition-all flex items-center gap-1.5">
+                        <i class="fa-solid fa-paper-plane"></i> Connect With Us
+                    </a>
+                </nav>
+
+                <!-- Mobile Menu Button -->
+                <div class="flex lg:hidden">
+                    <button id="mobileMenuBtn" onclick="toggleMobileMenu()" class="text-slate-300 hover:text-gold-400 focus:outline-none p-2 rounded-md cursor-pointer">
+                        <i id="menuIcon" class="fa-solid fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Menu Drawer -->
+        <div id="mobileMenu" class="hidden lg:hidden bg-navy-950 border-b border-gold-500/30 px-4 pt-2 pb-6 space-y-2">
+            <a href="#home" onclick="toggleMobileMenu()" class="block px-3 py-2 rounded-md text-base font-medium text-white hover:bg-navy-800">Home</a>
+            <a href="#attendance" onclick="toggleMobileMenu()" class="block px-3 py-2 rounded-md text-base font-medium text-slate-300 hover:bg-navy-800">Daily Attendance</a>
+            <a href="#notices" onclick="toggleMobileMenu()" class="block px-3 py-2 rounded-md text-base font-medium text-slate-300 hover:bg-navy-800">Notices</a>
+            <a href="#staff" onclick="toggleMobileMenu()" class="block px-3 py-2 rounded-md text-base font-bold text-gold-400 hover:bg-navy-800">Staff Directory</a>
+            <a href="#results" onclick="toggleMobileMenu()" class="block px-3 py-2 rounded-md text-base font-medium text-slate-300 hover:bg-navy-800">Results Portal</a>
+            <a href="#gallery" onclick="toggleMobileMenu()" class="block px-3 py-2 rounded-md text-base font-medium text-slate-300 hover:bg-navy-800">Events Gallery</a>
+            <a href="#facilities" onclick="toggleMobileMenu()" class="block px-3 py-2 rounded-md text-base font-medium text-slate-300 hover:bg-navy-800">Facilities</a>
+            <a href="#location" onclick="toggleMobileMenu()" class="block px-3 py-2 rounded-md text-base font-medium text-slate-300 hover:bg-navy-800">Map & Location</a>
+            <a href="#get-in-touch" onclick="toggleMobileMenu()" class="block px-3 py-2 rounded-md text-base font-bold bg-gold-500 text-navy-950 text-center mt-2">Connect With Us</a>
+        </div>
+    </header>
+
+    <!-- Announcement Ticker Bar -->
+    <div class="bg-gold-500 text-navy-950 font-semibold text-xs py-2 px-4 shadow-inner flex items-center overflow-hidden">
+        <div class="flex items-center gap-2 whitespace-nowrap pr-4 font-extrabold border-r border-navy-950/30 uppercase tracking-wider shrink-0">
+            <i class="fa-solid fa-bullhorn text-navy-900 animate-bounce"></i> Notice Board:
+        </div>
+        <div class="overflow-hidden w-full relative">
+            <div id="tickerText" class="whitespace-nowrap animate-[marquee_20s_linear_infinite] hover:[animation-play-state:paused] flex gap-8">
+                🎓 SSC Part II Board Examination Results announced! Use our Results Portal below to check status. • Admissions open for Grade 6th to 9th.
+            </div>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <section id="home" class="relative bg-navy-900 text-white py-16 lg:py-24 overflow-hidden">
+        <div class="absolute inset-0 opacity-10 bg-[radial-gradient(#f59e0b_1px,transparent_1px)] [background-size:24px_24px]"></div>
+        <div class="absolute -top-24 -right-24 w-96 h-96 rounded-full bg-gold-500/10 blur-3xl"></div>
+        <div class="absolute -bottom-24 -left-24 w-96 h-96 rounded-full bg-royal-600/20 blur-3xl"></div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                
+                <div class="lg:col-span-7 space-y-6 text-center lg:text-left">
+                    <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-gold-500/10 border border-gold-500/30 text-gold-400 text-xs font-semibold tracking-wide uppercase">
+                        <i class="fa-solid fa-award"></i> Premier Public Institution
+                    </div>
+                    <h1 class="font-serif text-3xl sm:text-5xl lg:text-6xl font-extrabold text-white leading-tight">
+                        <span id="heroTitle">Welcome to</span> <br class="hidden sm:inline"/>
+                        <span class="school-title gold-gradient-text">GOVT. HIGH SCHOOL THEKRIAN</span>
+                    </h1>
+                    <p id="heroSubtitle" class="text-slate-300 text-base sm:text-lg max-w-2xl mx-auto lg:mx-0 font-light leading-relaxed">
+                        Nurturing Character, Discipline & Academic Excellence through experienced teaching staff, computer science laboratories, and modern education facilities.
+                    </p>
+                    <div class="flex flex-wrap items-center justify-center lg:justify-start gap-4 pt-2">
+                        <a href="#staff" class="bg-gradient-to-r from-gold-500 to-gold-600 hover:from-gold-400 hover:to-gold-500 text-navy-950 font-bold px-7 py-3.5 rounded-lg shadow-lg hover:shadow-gold-500/20 transition-all flex items-center gap-2 cursor-pointer">
+                            <i class="fa-solid fa-users"></i> Staff Directory
+                        </a>
+                        <a href="#results" class="bg-navy-800/80 hover:bg-navy-800 text-white font-semibold px-7 py-3.5 rounded-lg border border-gold-500/40 hover:border-gold-400 transition-all flex items-center gap-2 cursor-pointer">
+                            <i class="fa-solid fa-magnifying-glass text-gold-400"></i> Search Results
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Stats Preview Card -->
+                <div class="lg:col-span-5">
+                    <div class="relative mx-auto max-w-md lg:max-w-none">
+                        <div class="absolute -inset-1 rounded-2xl bg-gradient-to-r from-gold-500 to-royal-600 opacity-50 blur-lg"></div>
+                        <div class="relative bg-navy-950 rounded-2xl border border-gold-500/30 p-6 shadow-2xl space-y-5">
+                            <div class="flex items-center justify-between border-b border-slate-800 pb-4">
+                                <span class="text-xs font-bold uppercase tracking-wider text-gold-400">Live Campus Key Statistics</span>
+                                <span class="text-[10px] bg-navy-900 border border-gold-500/30 text-gold-400 px-2.5 py-1 rounded-full font-semibold">Verified</span>
+                            </div>
+                            
+                            <div class="grid grid-cols-2 gap-4 text-sm">
+                                <button type="button" onclick="openClassStrength()" class="bg-navy-900/80 p-3.5 rounded-xl border border-slate-800 text-center hover:border-gold-500/40 transition-colors cursor-pointer w-full">
+                                    <div class="text-2xl font-bold gold-gradient-text" id="statStudents">708+</div>
+                                    <div class="text-xs text-slate-400 mt-1 font-medium">Students Enrolled</div><div class="text-[10px] text-gold-400 mt-1">Click for class-wise strength</div>
+                                </button>
+                                <div class="bg-navy-900/80 p-3.5 rounded-xl border border-slate-800 text-center hover:border-gold-500/40 transition-colors">
+                                    <div class="text-2xl font-bold gold-gradient-text" id="statTeachers">35+</div>
+                                    <div class="text-xs text-slate-400 mt-1 font-medium">Faculty Staff</div>
+                                </div>
+                                <div class="bg-navy-900/80 p-3.5 rounded-xl border border-slate-800 text-center hover:border-gold-500/40 transition-colors">
+                                    <div class="text-2xl font-bold gold-gradient-text" id="statCampus">16</div>
+                                    <div class="text-xs text-slate-400 mt-1 font-medium">Kanal Campus</div>
+                                </div>
+                                <div class="bg-navy-900/80 p-3.5 rounded-xl border border-slate-800 text-center hover:border-gold-500/40 transition-colors">
+                                    <div class="text-2xl font-bold gold-gradient-text" id="statLabs">20+</div>
+                                    <div class="text-xs text-slate-400 mt-1 font-medium">IT Lab Systems</div>
+                                </div>
+                            </div>
+
+                            <div class="pt-2 text-center border-t border-slate-800">
+                                <span class="text-[11px] text-slate-400">EMIS Code: <strong class="emis-text text-gold-400">37240022</strong> | Annual Pass Ratio: <strong id="statPassRate" class="text-gold-400">98%</strong></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Daily Attendance Section: Homepage -->
+    <section id="attendance" class="py-14 bg-white border-t border-slate-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row md:items-end md:justify-between gap-4 mb-7">
+                <div>
+                    <span class="text-xs font-bold text-gold-600 tracking-widest uppercase bg-gold-500/10 px-3 py-1 rounded-full border border-gold-500/30">Daily Attendance</span>
+                    <h2 class="text-3xl sm:text-4xl font-serif font-bold text-navy-900 mt-3">Class-wise Student Attendance</h2>
+                    <p class="text-slate-600 text-sm mt-2">Select a class and date to view the present and absent students list.</p>
+                </div>
+                <div class="flex flex-col sm:flex-row gap-3 sm:min-w-[340px]">
+                    <select id="publicAttendanceClass" onchange="renderPublicAttendance()" class="w-full rounded-lg border border-slate-300 p-3 text-sm focus:ring-2 focus:ring-gold-500 outline-none" aria-label="Select class for attendance">
+                        <option value="Nursery">Nursery</option><option value="Prep">Prep</option><option value="1st">1st Class</option><option value="2nd">2nd Class</option><option value="3rd">3rd Class</option><option value="4th">4th Class</option><option value="5th">5th Class</option><option value="6th">6th Class</option><option value="7th">7th Class</option><option value="8th">8th Class</option><option value="9th">9th Class</option><option value="10th">10th Class</option>
+                    </select>
+                    <input type="date" id="publicAttendanceDate" onchange="renderPublicAttendance()" class="w-full rounded-lg border border-slate-300 p-3 text-sm focus:ring-2 focus:ring-gold-500 outline-none" aria-label="Attendance date">
+                </div>
+            </div>
+            <div id="publicAttendanceSummary" class="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-5"></div>
+            <div id="publicAttendanceLists" class="grid grid-cols-1 lg:grid-cols-2 gap-5">
+                <div class="lg:col-span-2 rounded-xl border border-slate-200 bg-slate-50 p-8 text-center text-slate-500">Attendance has not been added for this class and date yet.</div>
+            </div>
+        </div>
+    </section>
+
+    <section id="classStrengthDetails" class="hidden py-12 bg-white border-t border-slate-200">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"><div class="flex justify-between items-center mb-6"><div><h2 class="text-2xl font-serif font-bold text-navy-900">Class-wise Students Enrolled</h2><p class="text-sm text-slate-600 mt-1">Updated by the school admin.</p></div><button onclick="document.getElementById('classStrengthDetails').classList.add('hidden')" class="px-4 py-2 rounded-lg bg-navy-900 text-white text-sm">Close</button></div><div id="publicClassStrengthGrid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4"></div><div id="publicClassStudentDetails" class="hidden mt-6 rounded-xl border border-slate-200 bg-white p-5"></div></div>
+    </section>
+
+    <!-- Daily Notices & Circulars Section (Public View Only) -->
+    <section id="notices" class="py-16 bg-white border-t border-slate-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row md:items-end justify-between mb-10 gap-4">
+                <div>
+                    <span class="text-xs font-bold text-gold-600 tracking-widest uppercase bg-gold-500/10 px-3 py-1 rounded-full border border-gold-500/30">Official Bulletin</span>
+                    <h2 class="text-3xl sm:text-4xl font-serif font-bold text-navy-900 mt-2">Daily Notices & Circulars</h2>
+                    <p class="text-slate-600 text-sm mt-1">Stay updated with official announcements, exam schedules, and circulars.</p>
+                </div>
+            </div>
+
+            <div id="publicNoticesList" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Dynamically rendered via JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Staff Area / Faculty Directory -->
+    <section id="staff" class="py-16 bg-slate-100 border-t border-slate-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row md:items-end justify-between mb-10 gap-4">
+                <div>
+                    <span class="text-xs font-bold text-gold-600 tracking-widest uppercase bg-gold-500/10 px-3 py-1 rounded-full border border-gold-500/30">Faculty Directory</span>
+                    <h2 class="text-3xl sm:text-4xl font-serif font-bold text-navy-900 mt-2">School Staff Area</h2>
+                    <p class="text-slate-600 text-sm mt-1">Dedicated teachers, administrative specialists, and lab instructors.</p>
+                </div>
+            </div>
+
+            <!-- Search & Filters -->
+            <div class="bg-white p-4 rounded-xl border border-slate-200 shadow-sm mb-8 space-y-4 md:space-y-0 md:flex md:items-center md:justify-between gap-4">
+                <div class="relative w-full md:w-80">
+                    <i class="fa-solid fa-magnifying-glass absolute left-3 top-1/2 -translate-y-1/2 text-slate-400 text-sm"></i>
+                    <input type="text" id="staffSearchInput" onkeyup="filterStaff()" placeholder="Search staff by name or subject..." class="w-full pl-9 pr-4 py-2 rounded-lg border border-slate-300 text-sm focus:ring-2 focus:ring-gold-500 focus:border-gold-500 outline-none">
+                </div>
+
+                <div class="flex flex-wrap items-center gap-2" id="filterTabs">
+                    <button onclick="setStaffFilter('Main Staff', this)" class="filter-btn active bg-navy-900 text-gold-400 font-bold px-3.5 py-1.5 rounded-lg text-xs transition-all border border-gold-500/30 cursor-pointer">Main Staff</button>
+                    <button onclick="setStaffFilter('All', this)" class="filter-btn bg-slate-100 hover:bg-slate-200 text-slate-700 font-medium px-3.5 py-1.5 rounded-lg text-xs transition-all cursor-pointer">All Staff</button>
+                </div>
+            </div>
+
+            <!-- Staff Grid -->
+            <div id="staffGrid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+                <!-- Injected via JS -->
+            </div>
+        </div>
+    </section>
+
+    <!-- About Us / Principal Message -->
+    <section id="about" class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-2xl mx-auto mb-12">
+                <span class="text-xs font-bold text-gold-600 tracking-widest uppercase bg-gold-500/10 px-3 py-1 rounded-full border border-gold-500/30">Leadership Statement</span>
+                <h2 class="text-3xl sm:text-4xl font-serif font-bold text-navy-900 mt-3">Principal's Desk</h2>
+                <p class="text-slate-600 text-sm mt-2">Guiding our students toward academic excellence, discipline, and moral values.</p>
+            </div>
+
+            <div class="max-w-4xl mx-auto bg-navy-900 text-white rounded-2xl p-6 sm:p-10 border-t-4 border-gold-500 shadow-2xl relative overflow-hidden">
+                <div class="absolute -right-10 -bottom-10 w-48 h-48 bg-gold-500/10 rounded-full blur-2xl"></div>
+                <div class="flex flex-col sm:flex-row items-center sm:items-start gap-6 relative z-10">
+                    <div id="principalPhotoContainer" class="w-28 h-28 rounded-full bg-navy-800 border-2 border-gold-400 flex items-center justify-center text-gold-400 text-4xl shrink-0 shadow-lg overflow-hidden">
+                        <i id="principalDefaultIcon" class="fa-solid fa-user-tie"></i>
+                        <img id="principalImg" src="" alt="Principal" class="w-full h-full object-cover hidden">
+                    </div>
+                    <div class="space-y-4 text-center sm:text-left flex-grow">
+                        <div>
+                            <h3 id="principalNameText" class="font-bold text-xl sm:text-2xl text-white">Principal Administration</h3>
+                            <p class="text-xs text-gold-400 font-semibold tracking-wider uppercase"><span id="principalDesignationText">Headmaster / Principal</span> • <span class="school-title">Govt. High School Thekrian</span></p>
+                        </div>
+                        <blockquote id="principalMessageText" class="text-slate-300 text-sm sm:text-base leading-relaxed italic border-l-2 border-gold-500 pl-4 my-2">
+                            "Welcome to our official school portal. Our mission is to foster a disciplined learning environment where students receive both traditional academic training and contemporary IT skillsets to serve the nation."
+                        </blockquote>
+                        <div class="pt-2 text-xs text-slate-400 flex items-center gap-2 justify-center sm:justify-start">
+                            <i class="fa-solid fa-circle-check text-gold-400"></i> Dedicated to Quality Public Education in District Jhelum
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Results Checker Section -->
+    <section id="results" class="py-16 bg-slate-50 border-t border-slate-200">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-2xl mx-auto mb-10">
+                <span class="text-xs font-bold text-gold-600 tracking-widest uppercase bg-gold-500/10 px-3 py-1 rounded-full border border-gold-500/30">Student Corner</span>
+                <h2 class="text-3xl sm:text-4xl font-serif font-bold text-navy-900 mt-3">Examination Results Portal</h2>
+                <p class="text-slate-600 text-sm mt-2">Search annual board results, SBA evaluations, and report cards instantly.</p>
+            </div>
+
+            <div class="bg-white rounded-2xl shadow-xl border border-slate-200 overflow-hidden">
+                <div class="bg-navy-900 text-white p-6 border-b border-gold-500/30 flex justify-between items-center">
+                    <div class="flex items-center gap-3">
+                        <i class="fa-solid fa-file-contract text-2xl text-gold-400"></i>
+                        <div>
+                            <h3 class="font-bold text-lg">Online Result Verification</h3>
+                            <p class="text-xs text-slate-300">Session 2025 - 2026</p>
+                        </div>
+                    </div>
+                    <span class="text-xs bg-gold-500 text-navy-950 font-bold px-2.5 py-1 rounded">Official Database</span>
+                </div>
+
+                <div class="p-6 sm:p-8 space-y-6">
+                    <form id="resultForm" onsubmit="searchResult(event)" class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+                        <div>
+                            <label class="block text-xs font-bold text-slate-700 uppercase mb-1">Select Class</label>
+                            <select id="examClass" class="w-full rounded-lg border-slate-300 border p-3 text-sm focus:ring-2 focus:ring-gold-500 focus:border-gold-500 outline-none"><option value="10th">10th Class</option><option value="9th">9th Class</option><option value="8th">8th Class</option><option value="7th">7th Class</option><option value="6th">6th Class</option></select>
+                        </div>
+                        <div>
+                            <label class="block text-xs font-bold text-slate-700 uppercase mb-1">Academic Session</label>
+                            <select id="examYear" class="w-full rounded-lg border-slate-300 border p-3 text-sm focus:ring-2 focus:ring-gold-500 focus:border-gold-500 outline-none">
+                                <option value="2026">2026 Annual</option>
+                                <option value="2025">2025 Annual</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label class="block text-xs font-bold text-slate-700 uppercase mb-1">Roll No / Student Name</label>
+                            <input type="text" id="rollNoInput" placeholder="e.g. 10245 or Ali" class="w-full rounded-lg border-slate-300 border p-3 text-sm focus:ring-2 focus:ring-gold-500 focus:border-gold-500 outline-none" required>
+                        </div>
+                        <div class="sm:col-span-3 flex justify-end">
+                            <button type="submit" class="w-full sm:w-auto bg-navy-900 hover:bg-navy-800 text-gold-400 border border-gold-500/50 font-bold px-8 py-3 rounded-lg shadow transition-all flex items-center justify-center gap-2 cursor-pointer">
+                                <i class="fa-solid fa-magnifying-glass"></i> Search Student Result
+                            </button>
+                        </div>
+                    </form>
+
+                    <!-- Result Card Display -->
+                    <div id="resultOutput" class="hidden mt-6 p-6 rounded-xl border border-slate-200 bg-slate-50 space-y-4">
+                        <div class="flex justify-between items-center border-b border-slate-200 pb-3">
+                            <h4 class="font-bold text-navy-900 text-lg flex items-center gap-2">
+                                <i class="fa-solid fa-user-graduate text-gold-600"></i> Student Result Sheet
+                            </h4>
+                            <div class="flex items-center gap-2"><span id="resBadge" class="px-3 py-1 rounded-full text-xs font-bold bg-green-100 text-green-800">RESULT</span><button type="button" onclick="printStudentResult()" class="px-3 py-1.5 rounded bg-navy-900 text-white text-xs font-bold"><i class="fa-solid fa-print mr-1"></i> Print</button></div>
+                        </div>
+                        <div id="resSubjects" class="space-y-1 text-sm"></div>
+                        <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 text-sm">
+                            <div>
+                                <span class="text-xs text-slate-500 block">Student Name</span>
+                                <span id="resName" class="font-bold text-slate-800">--</span>
+                            </div>
+                            <div>
+                                <span class="text-xs text-slate-500 block">Roll Number</span>
+                                <span id="resRoll" class="font-bold text-slate-800">--</span>
+                            </div>
+                            <div>
+                                <span class="text-xs text-slate-500 block">Marks Obtained</span>
+                                <span id="resMarks" class="font-bold text-slate-800">--</span>
+                            </div>
+                            <div>
+                                <span class="text-xs text-slate-500 block">Grade Status</span>
+                                <span id="resGrade" class="font-bold text-gold-600">--</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Events Gallery Section -->
+    <section id="gallery" class="py-16 bg-white border-t border-slate-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-2xl mx-auto mb-12">
+                <span class="text-xs font-bold text-gold-600 tracking-widest uppercase bg-gold-500/10 px-3 py-1 rounded-full border border-gold-500/30">Life at GHS THEKRIAN</span>
+                <h2 class="text-3xl sm:text-4xl font-serif font-bold text-navy-900 mt-3">Events & Campus Gallery</h2>
+                <p class="text-slate-600 text-sm mt-2">Highlights of sports, science exhibitions, and annual celebrations.</p>
+            </div>
+
+            <div id="publicGalleryGrid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Dynamically rendered via JS -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Facilities Section -->
+    <section id="facilities" class="py-16 bg-slate-50 border-t border-slate-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-2xl mx-auto mb-12">
+                <span class="text-xs font-bold text-gold-600 tracking-widest uppercase bg-gold-500/10 px-3 py-1 rounded-full border border-gold-500/30">Infrastructure</span>
+                <h2 class="text-3xl sm:text-4xl font-serif font-bold text-navy-900 mt-3">School Facilities</h2>
+                <p class="text-slate-600 text-sm mt-2">Modern infrastructure ensuring physical and intellectual growth.</p>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div class="bg-white rounded-xl p-6 border border-slate-200 shadow-sm hover:shadow-md transition-all group">
+                    <div class="w-12 h-12 rounded-lg bg-navy-900 text-gold-400 flex items-center justify-center text-xl mb-4 group-hover:scale-110 transition-transform">
+                        <i class="fa-solid fa-desktop"></i>
+                    </div>
+                    <h3 class="font-bold text-navy-900 text-base mb-2">Computer / IT Lab</h3>
+                    <p class="text-slate-600 text-xs leading-relaxed">Equipped with high-speed internet and desktop units for digital literacy and practical IT training.</p>
+                </div>
+
+                <div class="bg-white rounded-xl p-6 border border-slate-200 shadow-sm hover:shadow-md transition-all group">
+                    <div class="w-12 h-12 rounded-lg bg-navy-900 text-gold-400 flex items-center justify-center text-xl mb-4 group-hover:scale-110 transition-transform">
+                        <i class="fa-solid fa-vial"></i>
+                    </div>
+                    <h3 class="font-bold text-navy-900 text-base mb-2">Science Laboratories</h3>
+                    <p class="text-slate-600 text-xs leading-relaxed">Fully equipped Physics, Chemistry, and Biology lab tools for secondary school practical work.</p>
+                </div>
+
+                <div class="bg-white rounded-xl p-6 border border-slate-200 shadow-sm hover:shadow-md transition-all group">
+                    <div class="w-12 h-12 rounded-lg bg-navy-900 text-gold-400 flex items-center justify-center text-xl mb-4 group-hover:scale-110 transition-transform">
+                        <i class="fa-solid fa-child-reaching"></i>
+                    </div>
+                    <h3 class="font-bold text-navy-900 text-base mb-2">ECCE Classroom</h3>
+                    <p class="text-slate-600 text-xs leading-relaxed">Special Early Childhood Care and Education room designed with modern learning kits and play areas.</p>
+                </div>
+
+                <div class="bg-white rounded-xl p-6 border border-slate-200 shadow-sm hover:shadow-md transition-all group">
+                    <div class="w-12 h-12 rounded-lg bg-navy-900 text-gold-400 flex items-center justify-center text-xl mb-4 group-hover:scale-110 transition-transform">
+                        <i class="fa-solid fa-futbol"></i>
+                    </div>
+                    <h3 class="font-bold text-navy-900 text-base mb-2">Sports Grounds</h3>
+                    <p class="text-slate-600 text-xs leading-relaxed">Spacious grounds for cricket, football, and physical education events on a 16-kanal campus area.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Location & Google Maps Section -->
+    <section id="location" class="py-16 bg-white border-t border-slate-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-2xl mx-auto mb-10">
+                <span class="text-xs font-bold text-gold-600 tracking-widest uppercase bg-gold-500/10 px-3 py-1 rounded-full border border-gold-500/30">Find Us</span>
+                <h2 class="text-3xl sm:text-4xl font-serif font-bold text-navy-900 mt-3">Interactive Campus Location</h2>
+                <p class="text-slate-600 text-sm mt-2">Visit Govt. High School Thekrian in District Jhelum, Punjab.</p>
+            </div>
+
+            <div class="bg-slate-50 p-4 sm:p-6 rounded-2xl border border-slate-200 shadow-xl grid grid-cols-1 lg:grid-cols-12 gap-6 items-center">
+                <div class="lg:col-span-8 h-80 sm:h-96 rounded-xl overflow-hidden border border-slate-300 relative shadow-inner">
+                    <!-- Google Maps Embed -->
+                    <iframe 
+                        title="Govt High School Thekrian Map Location"
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3344.6562508423267!2d73.59450637551585!3d33.03918567355525!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x391f8d43714d20e5%3A0x2da01a836b34e81!2sHigh%20School%20Thekrian!5e0!3m2!1sen!2s!4v1792847508767!5m2!1sen!2s" 
+                        class="w-full h-full border-0" 
+                        allowfullscreen="" 
+                        loading="lazy" 
+                        referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
+                </div>
+
+                <div class="lg:col-span-4 space-y-4">
+                    <div class="bg-navy-900 text-white p-6 rounded-xl border border-gold-500/30 space-y-3">
+                        <h3 class="font-serif font-bold text-lg text-gold-400">Location Summary</h3>
+                        <p class="text-xs text-slate-300 leading-relaxed">
+                            Located conveniently in Miana Mohallah, Dina. Easily accessible via GT Road Dina, District Jhelum.
+                        </p>
+                        <div class="pt-2 text-xs space-y-2 border-t border-slate-800">
+                            <div>
+                                <span class="text-slate-400 block">District:</span>
+                                <strong class="text-white">Jhelum, Punjab, Pakistan</strong>
+                            </div>
+                            <div>
+                                <span class="text-slate-400 block">Tehsil:</span>
+                                <strong class="text-white">Dina</strong>
+                            </div>
+                        </div>
+                        <a href="https://www.google.com/maps/search/?api=1&query=High%20School%20Thekrian%2C%20Jhelum" target="_blank" rel="noopener noreferrer" class="mt-4 w-full bg-gold-500 hover:bg-gold-400 text-navy-950 font-bold py-3 px-4 rounded-lg text-xs transition-colors flex items-center justify-center gap-2 cursor-pointer shadow">
+                            <i class="fa-solid fa-map-location-dot"></i> Open in Google Maps
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Connect With Us / Contact Section -->
+    <section id="get-in-touch" class="py-16 bg-navy-900 text-white relative border-t border-gold-500/20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="text-center max-w-2xl mx-auto mb-12">
+                <span class="text-xs font-bold text-gold-400 tracking-widest uppercase bg-gold-500/10 px-3 py-1 rounded-full border border-gold-500/30">Connect With Us</span>
+                <h2 class="text-3xl sm:text-4xl font-serif font-bold text-white mt-3">Contact School Administration</h2>
+                <p class="text-slate-300 text-sm mt-2">Have questions regarding admissions, results, or general inquiries? Send us a message.</p>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+                
+                <div class="lg:col-span-5 space-y-6">
+                    <div class="bg-navy-950 p-6 rounded-2xl border border-gold-500/30 space-y-4 shadow-xl">
+                        <h3 class="text-xl font-bold font-serif text-gold-400 border-b border-slate-800 pb-3">Contact Information</h3>
+                        
+                        <div class="flex items-start gap-4">
+                            <div class="w-10 h-10 rounded-lg bg-navy-900 border border-gold-500/40 text-gold-400 flex items-center justify-center text-lg shrink-0">
+                                <i class="fa-solid fa-location-dot"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-xs text-slate-400 font-bold uppercase">Campus Address</h4>
+                                <p class="text-sm font-semibold text-white address-text">Miana Mohallah, Dina, Jhelum, Punjab, Pakistan</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-4">
+                            <div class="w-10 h-10 rounded-lg bg-navy-900 border border-gold-500/40 text-gold-400 flex items-center justify-center text-lg shrink-0">
+                                <i class="fa-solid fa-phone"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-xs text-slate-400 font-bold uppercase">Phone Helpline</h4>
+                                <a href="tel:0544631921" class="text-sm font-bold text-gold-400 hover:underline phone-text">(0544) 631921</a>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-4">
+                            <div class="w-10 h-10 rounded-lg bg-navy-900 border border-gold-500/40 text-gold-400 flex items-center justify-center text-lg shrink-0">
+                                <i class="fa-solid fa-envelope"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-xs text-slate-400 font-bold uppercase">Email Address</h4>
+                                <a href="https://mail.google.com/mail/?view=cm&amp;fs=1&amp;to=ghsdina%40gmail.com" class="text-sm font-bold text-gold-400 hover:underline email-text">ghsdina@gmail.com</a>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-4">
+                            <div class="w-10 h-10 rounded-lg bg-navy-900 border border-gold-500/40 text-gold-400 flex items-center justify-center text-lg shrink-0">
+                                <i class="fa-solid fa-clock"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-xs text-slate-400 font-bold uppercase">School Timings</h4>
+                                <p class="text-xs text-slate-300">Mon - Sat: 08:00 AM - 01:30 PM (Friday: 08:00 AM - 12:00 PM)</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bg-navy-950 p-4 rounded-xl border border-gold-500/30 flex items-center justify-between shadow-md">
+                        <div>
+                            <span class="text-xs text-slate-400 block">Quick Phone Call</span>
+                            <span class="text-sm font-bold text-white">Office Helpline</span>
+                        </div>
+                        <a href="tel:0544631921" class="bg-gold-500 hover:bg-gold-400 text-navy-950 font-bold px-4 py-2 rounded-lg text-xs flex items-center gap-2 cursor-pointer transition-colors">
+                            <i class="fa-solid fa-phone"></i> Call Now
+                        </a>
+                    </div>
+                </div>
+
+                <div class="lg:col-span-7 bg-navy-950 p-6 sm:p-8 rounded-2xl border border-gold-500/30 shadow-2xl">
+                    <form id="schoolContactForm" onsubmit="handleContactSubmit(event)" class="space-y-4">
+                        <div id="contactSuccessMsg" class="hidden p-4 rounded-lg bg-green-900/50 border border-green-500 text-green-200 text-xs font-semibold">
+                            <i class="fa-solid fa-circle-check text-green-400 mr-1"></i> Your inquiry has been submitted! The administration will contact you shortly.
+                        </div>
+
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                            <div>
+                                <label class="block text-xs text-slate-300 font-semibold mb-1">Your Full Name *</label>
+                                <input id="contactName" name="name" type="text" placeholder="e.g. Ahmad Hassan" class="w-full rounded-lg bg-navy-900 border border-slate-800 p-3 text-sm text-white focus:border-gold-500 outline-none" required>
+                            </div>
+                            <div>
+                                <label class="block text-xs text-slate-300 font-semibold mb-1">Phone / Mobile No *</label>
+                                <input id="contactPhone" name="phone" type="tel" placeholder="03001234567" class="w-full rounded-lg bg-navy-900 border border-slate-800 p-3 text-sm text-white focus:border-gold-500 outline-none" required>
+                            </div>
+                        </div>
+
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                            <div>
+                                <label class="block text-xs text-slate-300 font-semibold mb-1">Email Address</label>
+                                <input id="contactEmail" name="email" type="email" placeholder="name@example.com" class="w-full rounded-lg bg-navy-900 border border-slate-800 p-3 text-sm text-white focus:border-gold-500 outline-none">
+                            </div>
+                            <div>
+                                <label class="block text-xs text-slate-300 font-semibold mb-1">Inquiry Type</label>
+                                <select id="contactInquiryType" name="inquiry_type" class="w-full rounded-lg bg-navy-900 border border-slate-800 p-3 text-sm text-white focus:border-gold-500 outline-none">
+                                    <option value="Admission">Admissions Query</option>
+                                    <option value="Results">Result Verification</option>
+                                    <option value="Staff">Staff / Faculty Inquiry</option>
+                                    <option value="General">General Question</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div>
+                            <label class="block text-xs text-slate-300 font-semibold mb-1">Your Message *</label>
+                            <textarea id="contactMessage" name="message" rows="4" placeholder="Write your inquiry message here..." class="w-full rounded-lg bg-navy-900 border border-slate-800 p-3 text-sm text-white focus:border-gold-500 outline-none" required></textarea>
+                        </div>
+
+                        <button type="submit" class="w-full bg-gradient-to-r from-gold-500 to-gold-600 hover:from-gold-400 hover:to-gold-500 text-navy-950 font-bold py-3.5 rounded-lg transition-all shadow-lg flex items-center justify-center gap-2 cursor-pointer">
+                            <i class="fa-solid fa-paper-plane"></i> Submit Inquiry
+                        </button>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Password Login Modal -->
+    <div id="loginModal" class="fixed inset-0 bg-navy-950/80 backdrop-blur-sm z-50 hidden flex items-center justify-center p-4">
+        <div class="bg-navy-900 border border-gold-500/40 rounded-2xl max-w-md w-full p-6 text-white relative shadow-2xl">
+            <button onclick="closeModal('loginModal')" class="absolute top-4 right-4 text-slate-400 hover:text-white cursor-pointer">
+                <i class="fa-solid fa-xmark text-xl"></i>
+            </button>
+            <div class="text-center mb-6">
+                <div class="w-12 h-12 bg-gold-500/10 border border-gold-500/30 rounded-full flex items-center justify-center mx-auto mb-2 text-gold-400 text-xl">
+                    <i class="fa-solid fa-user-lock"></i>
+                </div>
+                <h3 class="text-xl font-bold font-serif text-white">Admin Authentication</h3>
+                <p class="text-xs text-slate-400 mt-1">Enter admin authorization passcode to access portal settings.</p>
+            </div>
+
+            <form onsubmit="handlePortalLogin(event)" class="space-y-4">
+                <div id="loginErrorMsg" class="hidden p-3 rounded-lg bg-red-900/50 border border-red-500 text-red-200 text-xs font-semibold text-center">
+                    Invalid Passcode Key!
+                </div>
+
+                <div>
+                    <label class="block text-xs text-slate-300 font-semibold mb-1">Admin Username</label>
+                    <input type="text" id="loginUsername" placeholder="Enter admin username" class="w-full rounded-lg bg-navy-950 border border-slate-800 p-3 text-sm text-white focus:border-gold-500 outline-none" autocomplete="off" required>
+                </div>
+                <div>
+                    <label class="block text-xs text-slate-300 font-semibold mb-1">Passcode Password</label>
+                    <input type="password" id="loginPassword" placeholder="Enter passcode" class="w-full rounded-lg bg-navy-950 border border-slate-800 p-3 text-sm text-white focus:border-gold-500 outline-none" autocomplete="new-password" required>
+                </div>
+                <button type="submit" class="w-full bg-gold-500 hover:bg-gold-400 text-navy-950 font-bold py-3 rounded-lg transition-all shadow cursor-pointer">
+                    Authenticate & Access Dashboard
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Full Master Admin Dashboard Modal -->
+    <div id="masterAdminModal" class="fixed inset-0 bg-navy-950/80 backdrop-blur-sm z-50 hidden flex items-center justify-center p-4 overflow-y-auto">
+        <div class="bg-navy-900 border border-gold-500/40 rounded-2xl max-w-4xl w-full p-6 text-white relative shadow-2xl my-8 custom-scrollbar max-h-[90vh] overflow-y-auto">
+            <button onclick="closeModal('masterAdminModal')" class="absolute top-4 right-4 text-slate-400 hover:text-white cursor-pointer">
+                <i class="fa-solid fa-xmark text-xl"></i>
+            </button>
+            <div class="flex items-center gap-3 mb-6 border-b border-slate-800 pb-4">
+                <div class="w-10 h-10 bg-gold-500/10 border border-gold-500/30 rounded-full flex items-center justify-center text-gold-400 text-lg">
+                    <i class="fa-solid fa-sliders"></i>
+                </div>
+                <div>
+                    <h3 class="text-xl font-bold font-serif text-white">Full Website Control Dashboard</h3>
+                    <p class="text-xs text-gold-400">Authenticated Admin Session • Modify text, stats, photos, notices & gallery</p>
+                </div>
+            </div>
+            
+            <form onsubmit="saveMasterSettings(event)" class="space-y-6">
+                
+                <!-- Section 1: Change Admin Passcode -->
+                <div class="space-y-3 bg-navy-950 p-4 rounded-xl border border-gold-500/30">
+                    <h4 class="text-xs font-bold text-gold-400 uppercase tracking-wider flex items-center gap-1.5">
+                        <i class="fa-solid fa-key"></i> 1. Security Settings (Change Admin Password)
+                    </h4>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                        <div>
+                            <label class="block text-xs text-slate-300 font-semibold mb-1">New Admin Passcode</label>
+                            <input type="password" id="adminNewPasscode" placeholder="Leave empty to keep current password" class="w-full rounded-lg bg-navy-900 border border-slate-800 p-2.5 text-sm text-white focus:border-gold-500 outline-none">
+                        </div>
+                        <div class="flex items-end">
+                            <span class="text-[11px] text-slate-400 italic">Current Passcode: Protected</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Section 2: Basic Info -->
+                <div class="space-y-3">
+                    <h4 class="text-xs font-bold text-gold-400 uppercase tracking-wider border-b border-slate-800 pb-1">2. School Information</h4>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                        <div>
+                            <label class="block text-xs text-slate-300 font-semibold mb-1">School Name</label>
+                            <input type="text" id="adminSchoolName" class="w-full rounded-lg bg-navy-950 border border-slate-800 p-2.5 text-sm text-white focus:border-gold-500 outline-none" required>
+                        </div>
+                        <div>
+                            <label class="block text-xs text-slate-300 font-semibold mb-1">Tagline / Subtitle</label>
+                            <input type="text" id="adminTagline" class="w-full rounded-lg bg-navy-950 border border-slate-800 p-2.5 text-sm text-white focus:border-gold-500 outline-none" required>
+                        </div>
+                        <div>
+                            <label class="block text-xs text-slate-300 font-semibold mb-1">EMIS Code</label>
+                            <input type="text" id="adminEmis" class="w-full rounded-lg bg-navy-950 border border-slate-800 p-2.5 text-sm text-white focus:border-gold-500 outline-none" required>
+                        </div>
+                        <div>
+                            <label class="block text-xs text-slate-300 font-semibold mb-1">Phone Helpline</label>
+                            <input type="text" id="adminPhone" class="w-full rounded-lg bg-navy-950 border border-slate-800 p-2.5 text-sm text-white focus:border-gold-500 outline-none" required>
+                        </div>
+                        <div>
+                            <label class="block text-xs text-slate-300 font-semibold mb-1">Official Email Address</label>
+                            <input type="email" id="adminEmail" class="w-full rounded-lg bg-navy-950 border border-slate-800 p-2.5 text-sm text-white focus:border-gold-500 outline-none" required>
+                        </div>
+                        <div>
+                            <label class="block text-xs text-slate-300 font-semibold mb-1">Campus Physical Address</label>
+                            <input type="text" id="adminAddress" class="w-full rounded-lg bg-navy-950 border border-slate-800 p-2.5 text-sm text-white focus:border-gold-500 outline-none" required>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Section 3: Campus Statistics Counters -->
+                <div class="space-y-3">
+                    <h4 class="text-xs font-bold text-gold-400 uppercase tracking-wider border-b border-slate-800 pb-1">3. Editable Live Campus Statistics Counters</h4>
+                    <div class="grid grid-cols-2 sm:grid-cols-5 gap-4">
+                        <div>
+                            <label class="block text-xs text-slate-300 font-semibold mb-1">Students</label>
+                            <input type="text" id="adminStatStudents" class="w-full rounded-lg bg-navy-950 border border-slate-800 p-2.5 text-sm text-white focus:border-gold-500 outline-none" required>
+                        </div>
+                        <div>
+                            <label class="block text-xs text-slate-300 font-semibold mb-1">Teachers</label>
+                            <input type="text" id="adminStatTeachers" class="w-full rounded-lg bg-navy-950 border border-slate-800 p-2.5 text-sm text-white focus:border-gold-500 outline-none" required>
+                        </div>
+                        <div>
+                            <label class="block text-xs text-slate-300 font-semibold mb-1">Campus Kanals</label>
+                            <input type="text" id="adminStatCampus" class="w-full rounded-lg bg-navy-950 border border-slate-800 p-2.5 text-sm text-white focus:border-gold-500 outline-none" required>
+                        </div>
+                        <div>
+                            <label class="block text-xs text-slate-300 font-semibold mb-1">IT Systems</label>
+                            <input type="text" id="adminStatLabs" class="w-full rounded-lg bg-navy-950 border border-slate-800 p-2.5 text-sm text-white focus:border-gold-500 outline-none" required>
+                        </div>
+                        <div>
+                            <label class="block text-xs text-slate-300 font-semibold mb-1">Pass Ratio</label>
+                            <input type="text" id="adminStatPassRate" class="w-full rounded-lg bg-navy-950 border border-slate-800 p-2.5 text-sm text-white focus:border-gold-500 outline-none" required>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Section 4: Principal & Photo Control -->
+                <div class="space-y-3">
+                    <h4 class="text-xs font-bold text-gold-400 uppercase tracking-wider border-b border-slate-800 pb-1">4. Principal Details & Profile Photo</h4>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                        <div>
+                            <label class="block text-xs text-slate-300 font-semibold mb-1">Principal Name</label>
+                            <input type="text" id="adminPrincipalName" class="w-full rounded-lg bg-navy-950 border border-slate-800 p-2.5 text-sm text-white focus:border-gold-500 outline-none" required>
+                        </div>
+                        <div>
+                            <label class="block text-xs text-slate-300 font-semibold mb-1">Principal Designation</label>
+                            <input type="text" id="adminPrincipalDesig" class="w-full rounded-lg bg-navy-950 border border-slate-800 p-2.5 text-sm text-white focus:border-gold-500 outline-none" required>
+                        </div>
+                        <div class="sm:col-span-2">
+                            <label class="block text-xs text-slate-300 font-semibold mb-1">Principal Photo Upload (Image File or Base64)</label>
+                            <input type="file" id="adminPrincipalPhotoFile" accept="image/*" onchange="convertPrincipalImageToBase64(this)" class="w-full rounded-lg bg-navy-950 border border-slate-800 p-2 text-xs text-slate-300 focus:border-gold-500 outline-none">
+                            <p class="text-[10px] text-slate-400 mt-1">Select an image file from your phone or computer to update Principal's profile photo.</p>
+                        </div>
+                        <div class="sm:col-span-2">
+                            <label class="block text-xs text-slate-300 font-semibold mb-1">Notice Ticker Bar Text</label>
+                            <input type="text" id="adminTicker" class="w-full rounded-lg bg-navy-950 border border-slate-800 p-2.5 text-sm text-white focus:border-gold-500 outline-none" required>
+                        </div>
+                        <div class="sm:col-span-2">
+                            <label class="block text-xs text-slate-300 font-semibold mb-1">Principal Message Text</label>
+                            <textarea id="adminPrincipalMsg" rows="3" class="w-full rounded-lg bg-navy-950 border border-slate-800 p-2.5 text-sm text-white focus:border-gold-500 outline-none" required></textarea>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Section 5: Daily Notices Management -->
+                <div class="space-y-3 pt-2">
+                    <div class="flex items-center justify-between border-b border-slate-800 pb-2">
+                        <h4 class="text-xs font-bold text-gold-400 uppercase tracking-wider">5. Daily Notices & Bulletins Management</h4>
+                        <button type="button" onclick="openAddNoticeModal()" class="bg-navy-800 hover:bg-navy-700 text-gold-400 border border-gold-500/30 font-bold px-3 py-1 rounded text-xs flex items-center gap-1.5 cursor-pointer">
+                            <i class="fa-solid fa-plus"></i> Add New Notice
+                        </button>
+                    </div>
+                    <div id="adminNoticesList" class="space-y-2 max-h-48 overflow-y-auto custom-scrollbar p-2 bg-navy-950 rounded-xl border border-slate-800">
+                        <!-- Rendered via JS -->
+                    </div>
+                </div>
+
+                <!-- Section 6: Gallery & Events Management -->
+                <div class="space-y-3 pt-2">
+                    <div class="flex items-center justify-between border-b border-slate-800 pb-2">
+                        <h4 class="text-xs font-bold text-gold-400 uppercase tracking-wider">6. Gallery & Events Management</h4>
+                        <button type="button" onclick="openAddGalleryModal()" class="bg-navy-800 hover:bg-navy-700 text-gold-400 border border-gold-500/30 font-bold px-3 py-1 rounded text-xs flex items-center gap-1.5 cursor-pointer">
+                            <i class="fa-solid fa-image"></i> Add Event Photo
+                        </button>
+                    </div>
+                    <div id="adminGalleryList" class="grid grid-cols-2 sm:grid-cols-4 gap-3 max-h-48 overflow-y-auto custom-scrollbar p-2 bg-navy-950 rounded-xl border border-slate-800">
+                        <!-- Rendered via JS -->
+                    </div>
+                </div>
+
+                <!-- Section 7: Staff Management -->
+                <div class="space-y-3 pt-2">
+                    <div class="flex items-center justify-between border-b border-slate-800 pb-2">
+                        <h4 class="text-xs font-bold text-gold-400 uppercase tracking-wider">7. Staff Directory Management</h4>
+                        <button type="button" onclick="closeModal('masterAdminModal'); openAddStaffModal();" class="bg-navy-800 hover:bg-navy-700 text-gold-400 border border-gold-500/30 font-bold px-3 py-1 rounded text-xs flex items-center gap-1.5 cursor-pointer">
+                            <i class="fa-solid fa-user-plus"></i> Add New Staff Member
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Class list management -->
+                <div class="space-y-4 pt-3 border-t border-slate-800">
+                  <h4 class="text-xs font-bold text-gold-400 uppercase tracking-wider">8. Website Settings — Manage Classes</h4>
+                  <p class="text-[11px] text-slate-400">Nursery se 10th tak classes pehle se add hain. Zaroorat par nayi class yahan add karein; class attendance, strength aur result forms mein bhi show hogi.</p>
+                  <div class="flex flex-col sm:flex-row gap-2"><input id="newClassName" placeholder="New class name (e.g. Play Group)" class="flex-1 rounded-lg bg-navy-950 border border-slate-700 p-2.5 text-sm text-white"><button type="button" onclick="addSchoolClass()" class="bg-gold-500 hover:bg-gold-400 text-navy-950 font-bold px-4 py-2 rounded-lg text-sm">Add Class</button></div>
+                  <div id="adminClassList" class="flex flex-wrap gap-2"></div>
+                </div>
+                <!-- Class strength and daily attendance summary settings -->
+                <div class="space-y-4 pt-3 border-t border-slate-800">
+                  <h4 class="text-xs font-bold text-gold-400 uppercase tracking-wider">8. Class Strength & Daily Attendance Summary</h4>
+                  <p class="text-[11px] text-slate-400">Har class ke total students aur aaj ke present/absent numbers yahan update karein. Save karne par public page par show honge.</p>
+                  <div id="adminClassSummarySettings" class="grid grid-cols-1 md:grid-cols-2 gap-3"></div>
+                </div>
+                <div class="space-y-4 pt-3 border-t border-slate-800">
+                  <h4 class="text-xs font-bold text-gold-400 uppercase tracking-wider">9. Class Student Lists — Add / Edit / Delete</h4>
+                  <p class="text-[11px] text-slate-400">Har class ki enrolled students list yahan manage karein. Yehi naam aur roll numbers Students Enrolled page par class select karne se show honge.</p>
+                  <div class="grid grid-cols-1 sm:grid-cols-3 gap-3">
+                    <label class="text-xs text-slate-300">Select Class<select id="rosterAdminClass" onchange="renderRosterEditor()" class="mt-1 w-full rounded-lg bg-navy-950 border border-slate-700 p-2.5 text-sm text-white"></select></label>
+                    <label class="text-xs text-slate-300">Student Name<input id="rosterStudentName" placeholder="Student full name" class="mt-1 w-full rounded-lg bg-navy-950 border border-slate-700 p-2.5 text-sm text-white"></label>
+                    <label class="text-xs text-slate-300">Roll Number<input id="rosterStudentRoll" placeholder="Roll number" class="mt-1 w-full rounded-lg bg-navy-950 border border-slate-700 p-2.5 text-sm text-white"></label>
+                  </div>
+                  <div class="flex flex-wrap gap-3"><button type="button" onclick="saveRosterStudent()" class="bg-gold-500 hover:bg-gold-400 text-navy-950 font-bold px-4 py-2.5 rounded-lg text-sm">Add / Save Student</button><button type="button" onclick="clearRosterEditor()" class="bg-slate-700 text-white px-4 py-2.5 rounded-lg text-sm">Clear</button></div>
+                  <div id="rosterEditorMessage" class="text-xs text-slate-300"></div><div id="adminRosterList" class="space-y-2 max-h-64 overflow-y-auto"></div>
+                </div>
+                <div class="space-y-4 pt-3 border-t border-slate-800">
+                  <h4 class="text-xs font-bold text-gold-400 uppercase tracking-wider">9. Student Result Upload / Edit</h4>
+                  <p class="text-[11px] text-slate-400">Student ka result add ya edit karein. Subject marks comma-separated likhein, misaal: English:75, Urdu:80, Math:90.</p>
+                  <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3">
+                    <input id="resultAdminName" placeholder="Student full name" class="rounded-lg bg-navy-950 border border-slate-700 p-2.5 text-sm text-white">
+                    <input id="resultAdminRoll" placeholder="Roll number" class="rounded-lg bg-navy-950 border border-slate-700 p-2.5 text-sm text-white">
+                    <select id="resultAdminClass" class="rounded-lg bg-navy-950 border border-slate-700 p-2.5 text-sm text-white"><option>6th</option><option>7th</option><option>8th</option><option>9th</option><option>10th</option></select>
+                    <input id="resultAdminYear" value="2026" placeholder="Academic year" class="rounded-lg bg-navy-950 border border-slate-700 p-2.5 text-sm text-white">
+                    <input id="resultAdminSubjects" placeholder="Subject marks: English:75, Urdu:80" class="sm:col-span-2 rounded-lg bg-navy-950 border border-slate-700 p-2.5 text-sm text-white">
+                  </div>
+                  <div class="flex flex-wrap gap-3"><button type="button" onclick="saveStudentResult()" class="bg-gold-500 hover:bg-gold-400 text-navy-950 font-bold px-4 py-2.5 rounded-lg text-sm">Save / Update Result</button><button type="button" onclick="clearResultEditor()" class="bg-slate-700 text-white px-4 py-2.5 rounded-lg text-sm">Clear Form</button></div>
+                  <div id="resultAdminMessage" class="text-xs text-slate-300"></div><div id="adminResultsList" class="space-y-2 max-h-48 overflow-y-auto"></div>
+                </div>
+
+                <!-- Section 10: Daily Attendance Management (saved on this browser for now) -->
+                <div class="space-y-4 pt-3 border-t border-slate-800">
+                    <div>
+                        <h4 class="text-xs font-bold text-gold-400 uppercase tracking-wider">8. Daily Class-wise Attendance</h4>
+                        <p class="text-[11px] text-slate-400 mt-1">Choose class and date, add students, mark each Present or Absent, then save.</p>
+                    </div>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-3">
+                        <div>
+                            <label class="block text-xs text-slate-300 font-semibold mb-1">Class</label>
+                            <select id="adminAttendanceClass" onchange="loadAttendanceEditor()" class="w-full rounded-lg bg-navy-950 border border-slate-700 p-2.5 text-sm text-white outline-none">
+                                <option value="Nursery">Nursery</option><option value="Prep">Prep</option><option value="1st">1st Class</option><option value="2nd">2nd Class</option><option value="3rd">3rd Class</option><option value="4th">4th Class</option><option value="5th">5th Class</option><option value="6th">6th Class</option><option value="7th">7th Class</option><option value="8th">8th Class</option><option value="9th">9th Class</option><option value="10th">10th Class</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label class="block text-xs text-slate-300 font-semibold mb-1">Attendance Date</label>
+                            <input type="date" id="adminAttendanceDate" onchange="loadAttendanceEditor()" class="w-full rounded-lg bg-navy-950 border border-slate-700 p-2.5 text-sm text-white outline-none">
+                        </div>
+                        <div>
+                            <label class="block text-xs text-slate-300 font-semibold mb-1">Roll Number (optional)</label>
+                            <input type="text" id="attendanceRollInput" placeholder="e.g. 101" class="w-full rounded-lg bg-navy-950 border border-slate-700 p-2.5 text-sm text-white outline-none">
+                        </div>
+                        <div>
+                            <label class="block text-xs text-slate-300 font-semibold mb-1">Student Name</label>
+                            <input type="text" id="attendanceNameInput" placeholder="Enter student name" class="w-full rounded-lg bg-navy-950 border border-slate-700 p-2.5 text-sm text-white outline-none">
+                        </div>
+                    </div>
+                    <div class="flex flex-col sm:flex-row gap-3 sm:items-end">
+                        <div class="w-full sm:max-w-xs">
+                            <label class="block text-xs text-slate-300 font-semibold mb-1">Status</label>
+                            <select id="attendanceStatusInput" class="w-full rounded-lg bg-navy-950 border border-slate-700 p-2.5 text-sm text-white outline-none"><option value="Present">Present</option><option value="Absent">Absent</option></select>
+                        </div>
+                        <button type="button" onclick="addAttendanceStudent()" class="bg-gold-500 hover:bg-gold-400 text-navy-950 font-bold px-4 py-2.5 rounded-lg text-sm cursor-pointer"><i class="fa-solid fa-plus mr-1"></i> Add Student</button>
+                        <button type="button" onclick="saveAttendanceRecords()" class="bg-emerald-700 hover:bg-emerald-600 text-white font-bold px-4 py-2.5 rounded-lg text-sm cursor-pointer"><i class="fa-solid fa-floppy-disk mr-1"></i> Save Attendance</button>
+                    </div>
+                    <div id="attendanceEditorMessage" class="hidden rounded-lg p-3 text-xs font-semibold"></div>
+                    <div id="attendanceEditorList" class="space-y-2 bg-navy-950 border border-slate-800 rounded-xl p-3 min-h-16">
+                        <p class="text-xs text-slate-500 text-center py-3">No students added for this class/date.</p>
+                    </div>
+                </div>
+
+                <div class="flex justify-between items-center pt-4 border-t border-slate-800">
+                    <button type="button" onclick="logoutAdmin()" class="px-4 py-2 rounded-lg bg-red-900/60 hover:bg-red-800 text-red-200 text-xs font-semibold cursor-pointer hidden">
+                        <i class="fa-solid fa-right-from-bracket mr-1"></i> Log Out Admin
+                    </button>
+                    <div class="flex gap-3">
+                        <button type="button" onclick="closeModal('masterAdminModal')" class="px-4 py-2 rounded-lg bg-slate-800 text-slate-300 text-xs font-semibold hover:bg-slate-700 cursor-pointer">Cancel</button>
+                        <button type="submit" class="px-6 py-2 rounded-lg bg-gold-500 hover:bg-gold-400 text-navy-950 font-bold text-xs shadow cursor-pointer">Save All Changes</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Modal to Add New Staff -->
+    <div id="addStaffModal" class="fixed inset-0 bg-navy-950/80 backdrop-blur-sm z-50 hidden flex items-center justify-center p-4">
+        <div class="bg-navy-900 border border-gold-500/40 rounded-2xl max-w-md w-full p-6 text-white relative shadow-2xl my-8">
+            <button onclick="closeModal('addStaffModal')" class="absolute top-4 right-4 text-slate-400 hover:text-white cursor-pointer">
+                <i class="fa-solid fa-xmark text-xl"></i>
+            </button>
+            <div class="flex items-center gap-3 mb-6">
+                <div class="w-10 h-10 bg-gold-500/10 border border-gold-500/30 rounded-full flex items-center justify-center text-gold-400 text-lg">
+                    <i class="fa-solid fa-user-plus"></i>
+                </div>
+                <div>
+                    <h3 class="text-xl font-bold font-serif text-white">Add New Staff Member</h3>
+                    <p class="text-xs text-slate-400">Authenticated Staff Control</p>
+                </div>
+            </div>
+            
+            <form onsubmit="addStaffMember(event)" class="space-y-4">
+                <div>
+                    <label class="block text-xs text-slate-300 font-semibold mb-1">Staff Full Name *</label>
+                    <input type="text" id="staffNameInput" placeholder="e.g. Muhammad Farooq" class="w-full rounded-lg bg-navy-950 border border-slate-800 p-2.5 text-sm text-white focus:border-gold-500 outline-none" required>
+                </div>
+                <div class="grid grid-cols-2 gap-3">
+                    <div>
+                        <label class="block text-xs text-slate-300 font-semibold mb-1">Designation *</label>
+                        <input type="text" id="staffRoleInput" placeholder="e.g. Senior Teacher (SST)" class="w-full rounded-lg bg-navy-950 border border-slate-800 p-2.5 text-sm text-white focus:border-gold-500 outline-none" required>
+                    </div>
+                    <div>
+                        <label class="block text-xs text-slate-300 font-semibold mb-1">Category *</label>
+                        <select id="staffCategoryInput" class="w-full rounded-lg bg-navy-950 border border-slate-800 p-2.5 text-sm text-white focus:border-gold-500 outline-none">
+                            <option value="Administration">Administration</option>
+                            <option value="Teaching Staff">Teaching Staff</option>
+                            <option value="Science & IT">Science & IT</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="grid grid-cols-2 gap-3">
+                    <div>
+                        <label class="block text-xs text-slate-300 font-semibold mb-1">Subject *</label>
+                        <input type="text" id="staffSubjectInput" placeholder="e.g. Mathematics" class="w-full rounded-lg bg-navy-950 border border-slate-800 p-2.5 text-sm text-white focus:border-gold-500 outline-none" required>
+                    </div>
+                    <div>
+                        <label class="block text-xs text-slate-300 font-semibold mb-1">Qualification *</label>
+                        <input type="text" id="staffQualInput" placeholder="e.g. M.Sc, M.Ed" class="w-full rounded-lg bg-navy-950 border border-slate-800 p-2.5 text-sm text-white focus:border-gold-500 outline-none" required>
+                    </div>
+                </div>
+                <div>
+                    <label class="block text-xs text-slate-300 font-semibold mb-1">Staff Profile Photo (Optional Upload)</label>
+                    <input type="file" id="staffPhotoFileInput" accept="image/*" class="w-full rounded-lg bg-navy-950 border border-slate-800 p-2 text-xs text-slate-300 focus:border-gold-500 outline-none">
+                </div>
+                <div>
+                    <label class="block text-xs text-slate-300 font-semibold mb-1">Email / Contact</label>
+                    <input type="text" id="staffContactInput" placeholder="e.g. teacher@ghsdina.edu.pk" class="w-full rounded-lg bg-navy-950 border border-slate-800 p-2.5 text-sm text-white focus:border-gold-500 outline-none">
+                </div>
+                <div class="flex justify-end gap-3 pt-4 border-t border-slate-800">
+                    <button type="button" onclick="closeModal('addStaffModal')" class="px-4 py-2 rounded-lg bg-slate-800 text-slate-300 text-xs font-semibold hover:bg-slate-700 cursor-pointer">Cancel</button>
+                    <button type="submit" class="px-6 py-2 rounded-lg bg-gold-500 hover:bg-gold-400 text-navy-950 font-bold text-xs shadow cursor-pointer">Add Staff Member</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Modal to Add Daily Notice -->
+    <div id="addNoticeModal" class="fixed inset-0 bg-navy-950/80 backdrop-blur-sm z-50 hidden flex items-center justify-center p-4">
+        <div class="bg-navy-900 border border-gold-500/40 rounded-2xl max-w-md w-full p-6 text-white relative shadow-2xl">
+            <button onclick="closeModal('addNoticeModal')" class="absolute top-4 right-4 text-slate-400 hover:text-white cursor-pointer">
+                <i class="fa-solid fa-xmark text-xl"></i>
+            </button>
+            <h3 class="text-xl font-bold font-serif text-white mb-4">Add Official Daily Notice</h3>
+            <form onsubmit="saveNoticeItem(event)" class="space-y-4">
+                <div>
+                    <label class="block text-xs text-slate-300 font-semibold mb-1">Notice Title *</label>
+                    <input type="text" id="noticeTitleInput" placeholder="e.g. Annual Sports Week 2026 Schedule" class="w-full rounded-lg bg-navy-950 border border-slate-800 p-2.5 text-sm text-white focus:border-gold-500 outline-none" required>
+                </div>
+                <div class="grid grid-cols-2 gap-3">
+                    <div>
+                        <label class="block text-xs text-slate-300 font-semibold mb-1">Date *</label>
+                        <input type="date" id="noticeDateInput" class="w-full rounded-lg bg-navy-950 border border-slate-800 p-2.5 text-sm text-white focus:border-gold-500 outline-none" required>
+                    </div>
+                    <div>
+                        <label class="block text-xs text-slate-300 font-semibold mb-1">Priority Badge *</label>
+                        <select id="noticeBadgeInput" class="w-full rounded-lg bg-navy-950 border border-slate-800 p-2.5 text-sm text-white focus:border-gold-500 outline-none">
+                            <option value="Urgent">Urgent</option>
+                            <option value="Important">Important</option>
+                            <option value="General">General</option>
+                        </select>
+                    </div>
+                </div>
+                <div>
+                    <label class="block text-xs text-slate-300 font-semibold mb-1">Notice Content / Details *</label>
+                    <textarea id="noticeDescInput" rows="3" placeholder="Write notice details here..." class="w-full rounded-lg bg-navy-950 border border-slate-800 p-2.5 text-sm text-white focus:border-gold-500 outline-none" required></textarea>
+                </div>
+                <div class="flex justify-end gap-3 pt-3 border-t border-slate-800">
+                    <button type="button" onclick="closeModal('addNoticeModal')" class="px-4 py-2 rounded-lg bg-slate-800 text-slate-300 text-xs font-semibold">Cancel</button>
+                    <button type="submit" class="px-6 py-2 rounded-lg bg-gold-500 hover:bg-gold-400 text-navy-950 font-bold text-xs">Publish Notice</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Modal to Add Event Photo Gallery Item -->
+    <div id="addGalleryModal" class="fixed inset-0 bg-navy-950/80 backdrop-blur-sm z-50 hidden flex items-center justify-center p-4">
+        <div class="bg-navy-900 border border-gold-500/40 rounded-2xl max-w-md w-full p-6 text-white relative shadow-2xl">
+            <button onclick="closeModal('addGalleryModal')" class="absolute top-4 right-4 text-slate-400 hover:text-white cursor-pointer">
+                <i class="fa-solid fa-xmark text-xl"></i>
+            </button>
+            <h3 class="text-xl font-bold font-serif text-white mb-4">Add Event / Campus Photo</h3>
+            <form onsubmit="saveGalleryItem(event)" class="space-y-4">
+                <div>
+                    <label class="block text-xs text-slate-300 font-semibold mb-1">Event Title *</label>
+                    <input type="text" id="galleryTitleInput" placeholder="e.g. Science Exhibition 2026" class="w-full rounded-lg bg-navy-950 border border-slate-800 p-2.5 text-sm text-white focus:border-gold-500 outline-none" required>
+                </div>
+                <div>
+                    <label class="block text-xs text-slate-300 font-semibold mb-1">Select Photo File *</label>
+                    <input type="file" id="galleryFileInput" accept="image/*" class="w-full rounded-lg bg-navy-950 border border-slate-800 p-2 text-xs text-slate-300 focus:border-gold-500 outline-none" required>
+                </div>
+                <div>
+                    <label class="block text-xs text-slate-300 font-semibold mb-1">Event Description</label>
+                    <input type="text" id="galleryDescInput" placeholder="Brief event caption" class="w-full rounded-lg bg-navy-950 border border-slate-800 p-2.5 text-sm text-white focus:border-gold-500 outline-none">
+                </div>
+                <div class="flex justify-end gap-3 pt-3 border-t border-slate-800">
+                    <button type="button" onclick="closeModal('addGalleryModal')" class="px-4 py-2 rounded-lg bg-slate-800 text-slate-300 text-xs font-semibold">Cancel</button>
+                    <button type="submit" class="px-6 py-2 rounded-lg bg-gold-500 hover:bg-gold-400 text-navy-950 font-bold text-xs">Add Photo</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-navy-950 text-slate-400 border-t border-gold-500/20 text-xs py-12 mt-auto">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
+                <div class="space-y-3">
+                    <div class="flex items-center gap-2">
+                        <div class="w-8 h-8 rounded-full bg-gold-500 text-navy-950 flex items-center justify-center font-bold text-sm">GHS</div>
+                        <span class="school-title font-serif font-bold text-white text-base">GHS THEKRIAN</span>
+                    </div>
+                    <p class="text-slate-400 leading-relaxed">
+                        Providing quality public education, moral discipline, and secondary science studies in District Jhelum.
+                    </p>
+                </div>
+
+                <div>
+                    <h4 class="font-bold text-white uppercase tracking-wider text-xs mb-3 text-gold-400">Quick Links</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#about" class="hover:text-gold-400 transition-colors">About Us</a></li>
+                        <li><a href="#notices" class="hover:text-gold-400 transition-colors">Notices & Bulletins</a></li>
+                        <li><a href="#staff" class="hover:text-gold-400 transition-colors">Staff Directory</a></li>
+                        <li><a href="#results" class="hover:text-gold-400 transition-colors">Online Results Portal</a></li>
+                        <li><a href="#gallery" class="hover:text-gold-400 transition-colors">Events Gallery</a></li>
+                        <li><a href="#facilities" class="hover:text-gold-400 transition-colors">Campus Facilities</a></li>
+                        <li><a href="#location" class="hover:text-gold-400 transition-colors">Map & Location</a></li>
+                        <li><a href="#get-in-touch" class="hover:text-gold-400 transition-colors">Connect With Us</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="font-bold text-white uppercase tracking-wider text-xs mb-3 text-gold-400">Contact Details</h4>
+                    <ul class="space-y-2">
+                        <li><i class="fa-solid fa-location-dot mr-1 text-gold-400"></i> <span class="address-text">Miana Mohallah, Dina, Jhelum</span></li>
+                        <li><i class="fa-solid fa-phone mr-1 text-gold-400"></i> <a href="tel:0544631921" class="phone-text hover:underline">(0544) 631921</a></li>
+                        <li><i class="fa-solid fa-envelope mr-1 text-gold-400"></i> <a href="https://mail.google.com/mail/?view=cm&amp;fs=1&amp;to=ghsdina%40gmail.com" class="email-text hover:underline">ghsdina@gmail.com</a></li>
+                        <li><i class="fa-solid fa-barcode mr-1 text-gold-400"></i> EMIS Code: <span class="emis-text">37240022</span></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="font-bold text-white uppercase tracking-wider text-xs mb-3 text-gold-400">School Portal</h4>
+                    <p class="leading-relaxed mb-3">Public portal for parents, students, and staff of Government High School Thekrian.</p>
+                </div>
+            </div>
+
+            <div class="border-t border-slate-800 pt-6 flex flex-col sm:flex-row justify-between items-center gap-4 text-slate-500">
+                <p>© 2026 <span class="school-title">Govt. High School Thekrian</span>. All Rights Reserved.</p>
+                <div class="flex items-center gap-2">
+                    <span class="gold-gradient-text font-bold text-xs tracking-wider uppercase">Powered by Maham Ikhlaq</span>
+                    <button onclick="openAdminModalDirect()" title="Admin Control" class="hidden" style="display:none !important;">
+                        <i class="fa-solid fa-lock text-[10px]"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Application Logic Script -->
+    <script>
+        // Storage Configuration
+        let authPasscode = "321";
+        let isAdminLoggedIn = false;
+        let principalPhotoBase64 = "";
+
+        // Default School Data Structure
+        let schoolData = {
+            name: "GOVT. HIGH SCHOOL THEKRIAN",
+            tagline: "DISTRICT JHELUM • ESTD 1926",
+            emis: "37240022",
+            phone: "(0544) 631921",
+            email: "ghsdina@gmail.com",
+            address: "Miana Mohallah, Dina, Jhelum",
+            statStudents: "708+",
+            statTeachers: "35+",
+            statCampus: "16",
+            statLabs: "20+",
+            statPassRate: "98%",
+            principalName: "Principal Administration",
+            principalDesig: "Headmaster / Principal",
+            principalMsg: "Welcome to our official school portal. Our mission is to foster a disciplined learning environment where students receive both traditional academic training and contemporary IT skillsets to serve the nation.",
+            ticker: "🎓 SSC Part II Board Examination Results announced! Use our Results Portal below to check status. • Admissions open for Grade 6th to 9th."
+        };
+
+        // Default Daily Notices List
+        let noticesList = [
+            { id: 1, title: "SSC Annual Examination Date Sheet 2026", date: "2026-03-15", badge: "Urgent", desc: "Board examination schedules for Grade 9th & 10th have been published. Roll number slips are being distributed by respective class incharges." },
+            { id: 2, title: "Parent-Teacher Meeting (PTM)", date: "2026-03-20", badge: "Important", desc: "A mandatory PTM will be held on Saturday from 09:00 AM to 12:30 PM to discuss mid-term academic progress." },
+            { id: 3, title: "Spring Sports & Athletics Competition", date: "2026-03-25", badge: "General", desc: "Inter-house cricket and athletic trials will take place at the school main sports field." }
+        ];
+
+        // Default Gallery Items
+        let galleryList = [
+            { id: 1, title: "Annual Prize Distribution", desc: "Distribution of awards to academic toppers.", image: "https://images.unsplash.com/photo-1523240795612-9a054b0db644?w=600&auto=format&fit=crop&q=80" },
+            { id: 2, title: "Science & IT Exhibition", desc: "Students presenting computer science projects.", image: "https://images.unsplash.com/photo-1581092160607-ee22621dd758?w=600&auto=format&fit=crop&q=80" },
+            { id: 3, title: "Inter-School Sports Gala", desc: "Cricket tournament at the campus grounds.", image: "https://images.unsplash.com/photo-1574629810360-7efbbe195018?w=600&auto=format&fit=crop&q=80" }
+        ];
+
+        // Default Staff Directory List
+        let staffList = [
+            { id: 1, name: "Muhammad Tariq", role: "Headmaster / Principal", category: "Administration", subject: "School Admin", qualification: "M.A, M.Ed", contact: "headmaster@ghsdina.edu.pk", photo: "" },
+            { id: 2, name: "Abdul Rehman", role: "Senior Subject Specialist", category: "Teaching Staff", subject: "English & Literature", qualification: "M.A English, B.Ed", contact: "arehman@ghsdina.edu.pk", photo: "" },
+            { id: 3, name: "Zahid Mahmood", role: "Senior Science Teacher (SST)", category: "Science & IT", subject: "Physics & Chemistry", qualification: "M.Sc Physics, M.Ed", contact: "z.mahmood@ghsdina.edu.pk", photo: "" },
+            { id: 4, name: "Kamran Tariq", role: "Computer Instructor", category: "Science & IT", subject: "Computer Science & IT", qualification: "BS Computer Science", contact: "ktariq@ghsdina.edu.pk", photo: "" },
+            { id: 5, name: "Muhammad Asif", role: "EST Teacher", category: "Teaching Staff", subject: "Mathematics", qualification: "M.Sc Mathematics", contact: "asif@ghsdina.edu.pk", photo: "" },
+            { id: 6, name: "Sajid Ali", role: "Physical Education Teacher (PET)", category: "Teaching Staff", subject: "Sports & Fitness", qualification: "B.P.Ed", contact: "sajid@ghsdina.edu.pk", photo: "" }
+        ];
+
+        let activeFilter = 'Main Staff';
+
+        // Save & Load State Functions
+        function loadSavedState() {
+            const savedSchool = localStorage.getItem('ghs_school_data');
+            if (savedSchool) {
+                try { schoolData = JSON.parse(savedSchool); } catch(e){}
+            }
+            const savedPass = localStorage.getItem('ghs_admin_pass');
+            if (savedPass) { authPasscode = savedPass; }
+
+            const savedStaff = localStorage.getItem('ghs_staff_data');
+            if (savedStaff) {
+                try { staffList = JSON.parse(savedStaff); } catch(e){}
+            }
+
+            const savedNotices = localStorage.getItem('ghs_notices_data');
+            if (savedNotices) {
+                try { noticesList = JSON.parse(savedNotices); } catch(e){}
+            }
+
+            const savedGallery = localStorage.getItem('ghs_gallery_data');
+            if (savedGallery) {
+                try { galleryList = JSON.parse(savedGallery); } catch(e){}
+            }
+
+            const savedPrincipalPhoto = localStorage.getItem('ghs_principal_photo');
+            if (savedPrincipalPhoto) { principalPhotoBase64 = savedPrincipalPhoto; }
+        }
+
+        function saveStateToStorage() {
+            localStorage.setItem('ghs_school_data', JSON.stringify(schoolData));
+            localStorage.setItem('ghs_admin_pass', authPasscode);
+            localStorage.setItem('ghs_staff_data', JSON.stringify(staffList));
+            localStorage.setItem('ghs_notices_data', JSON.stringify(noticesList));
+            localStorage.setItem('ghs_gallery_data', JSON.stringify(galleryList));
+            if (principalPhotoBase64) {
+                localStorage.setItem('ghs_principal_photo', principalPhotoBase64);
+            }
+        }
+
+        function renderStaff() {
+            const grid = document.getElementById('staffGrid');
+            grid.innerHTML = '';
+
+            const searchTerm = document.getElementById('staffSearchInput').value.toLowerCase();
+
+            const filtered = staffList.filter(staff => {
+                const matchesMain = activeFilter === 'Main Staff' ? (staff.category === 'Administration' || staff.id === 1) : true;
+                const matchesCategory = activeFilter === 'All' || activeFilter === 'Main Staff' || staff.category === activeFilter;
+                const matchesSearch = staff.name.toLowerCase().includes(searchTerm) || 
+                                      staff.role.toLowerCase().includes(searchTerm) || 
+                                      staff.subject.toLowerCase().includes(searchTerm);
+                return matchesMain && matchesCategory && matchesSearch;
+            });
+
+            if (filtered.length === 0) {
+                grid.innerHTML = `
+                    <div class="col-span-full text-center py-12 bg-white rounded-xl border border-slate-200">
+                        <i class="fa-solid fa-users-slash text-4xl text-slate-300 mb-2"></i>
+                        <p class="text-slate-500 font-medium text-sm">No staff members match your search criteria.</p>
+                    </div>
+                `;
+                return;
+            }
+
+            filtered.forEach(staff => {
+                const card = document.createElement('div');
+                card.className = "bg-white rounded-xl border border-slate-200 shadow-sm hover:shadow-md transition-all p-5 flex flex-col justify-between relative group";
+                
+                let avatarHTML = `<div class="w-12 h-12 rounded-full bg-navy-900 border border-gold-400 flex items-center justify-center text-gold-400 font-bold text-lg shadow overflow-hidden">
+                                    <i class="fa-solid fa-user-tie"></i>
+                                  </div>`;
+                if (staff.photo) {
+                    avatarHTML = `<div class="w-12 h-12 rounded-full border border-gold-400 overflow-hidden shadow">
+                                    <img src="${staff.photo}" alt="${staff.name}" class="w-full h-full object-cover">
+                                  </div>`;
+                }
+
+                let deleteButtonHTML = '';
+                if (isAdminLoggedIn) {
+                    deleteButtonHTML = `
+                    <div class="mt-4 pt-3 border-t border-slate-100 flex justify-end">
+                        <button onclick="deleteStaffMember(${staff.id})" class="text-xs text-red-500 hover:text-red-700 font-semibold flex items-center gap-1 cursor-pointer">
+                            <i class="fa-solid fa-trash-can text-xs"></i> Delete Member
+                        </button>
+                    </div>`;
+                }
+
+                card.innerHTML = `
+                    <div>
+                        <div class="flex items-start justify-between mb-3">
+                            ${avatarHTML}
+                            <span class="text-[10px] font-bold px-2 py-0.5 rounded bg-gold-500/10 text-gold-700 border border-gold-500/30 uppercase">
+                                ${staff.category}
+                            </span>
+                        </div>
+                        <h4 class="font-bold text-navy-900 text-base group-hover:text-gold-600 transition-colors">${staff.name}</h4>
+                        <p class="text-xs font-semibold text-gold-600 mb-2">${staff.role}</p>
+                        
+                        <div class="space-y-1.5 text-xs text-slate-600 border-t border-slate-100 pt-3 mt-2">
+                            <div class="flex items-center gap-2">
+                                <i class="fa-solid fa-book-open text-gold-500 w-4"></i>
+                                <span>Subject: <strong>${staff.subject}</strong></span>
+                            </div>
+                            <div class="flex items-center gap-2">
+                                <i class="fa-solid fa-graduation-cap text-gold-500 w-4"></i>
+                                <span>Qual: <strong>${staff.qualification}</strong></span>
+                            </div>
+                            ${staff.contact ? `
+                            <div class="flex items-center gap-2 text-slate-500 truncate">
+                                <i class="fa-solid fa-envelope text-gold-500 w-4"></i>
+                                <a href="mailto:${staff.contact}" class="hover:underline truncate">${staff.contact}</a>
+                            </div>
+                            ` : ''}
+                        </div>
+                    </div>
+                    ${deleteButtonHTML}
+                `;
+                grid.appendChild(card);
+            });
+        }
+
+        function renderNotices() {
+            const publicGrid = document.getElementById('publicNoticesList');
+            const adminList = document.getElementById('adminNoticesList');
+            
+            publicGrid.innerHTML = '';
+            adminList.innerHTML = '';
+
+            if (noticesList.length === 0) {
+                publicGrid.innerHTML = `
+                    <div class="col-span-full text-center py-12 bg-slate-50 rounded-xl border border-slate-200">
+                        <i class="fa-solid fa-bell-slash text-4xl text-slate-300 mb-2"></i>
+                        <p class="text-slate-500 text-sm font-medium">No official notices posted at the moment.</p>
+                    </div>
+                `;
+            }
+
+            noticesList.forEach(notice => {
+                // Render Public Notice Card
+                const card = document.createElement('div');
+                card.className = "bg-slate-50 rounded-xl border border-slate-200 p-6 shadow-sm hover:shadow-md transition-all flex flex-col justify-between";
+                
+                let badgeClass = "bg-blue-100 text-blue-800";
+                if(notice.badge === 'Urgent') badgeClass = "bg-red-100 text-red-800";
+                if(notice.badge === 'Important') badgeClass = "bg-gold-500/20 text-gold-700 border border-gold-500/40";
+
+                card.innerHTML = `
+                    <div>
+                        <div class="flex justify-between items-center mb-3">
+                            <span class="text-[10px] font-bold px-2.5 py-1 rounded-full uppercase ${badgeClass}">${notice.badge}</span>
+                            <span class="text-xs text-slate-400 font-semibold"><i class="fa-regular fa-calendar-check mr-1"></i>${notice.date}</span>
+                        </div>
+                        <h3 class="font-bold text-navy-900 text-base mb-2">${notice.title}</h3>
+                        <p class="text-slate-600 text-xs leading-relaxed">${notice.desc}</p>
+                    </div>
+                    <div class="pt-4 mt-4 border-t border-slate-200 text-right">
+                        <span class="text-[10px] text-gold-600 font-bold uppercase">Official Circular</span>
+                    </div>
+                `;
+                publicGrid.appendChild(card);
+
+                // Render Admin Manage Notice Item
+                const adminItem = document.createElement('div');
+                adminItem.className = "flex items-center justify-between p-2.5 bg-navy-900 rounded-lg border border-slate-800 text-xs";
+                adminItem.innerHTML = `
+                    <div class="truncate mr-2">
+                        <span class="font-bold text-white block truncate">${notice.title}</span>
+                        <span class="text-[10px] text-slate-400">${notice.date} • ${notice.badge}</span>
+                    </div>
+                    <button type="button" onclick="deleteNotice(${notice.id})" class="text-red-400 hover:text-red-300 p-1 cursor-pointer">
+                        <i class="fa-solid fa-trash-can"></i>
+                    </button>
+                `;
+                adminList.appendChild(adminItem);
+            });
+        }
+
+        function renderGallery() {
+            const publicGrid = document.getElementById('publicGalleryGrid');
+            const adminGrid = document.getElementById('adminGalleryList');
+
+            publicGrid.innerHTML = '';
+            adminGrid.innerHTML = '';
+
+            galleryList.forEach(item => {
+                // Public Gallery Card
+                const card = document.createElement('div');
+                card.className = "bg-slate-50 rounded-xl overflow-hidden border border-slate-200 shadow-sm hover:shadow-md transition-all group";
+                card.innerHTML = `
+                    <div class="h-48 overflow-hidden relative">
+                        <img src="${item.image}" alt="${item.title}" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+                    </div>
+                    <div class="p-4">
+                        <h4 class="font-bold text-navy-900 text-sm mb-1">${item.title}</h4>
+                        <p class="text-xs text-slate-500">${item.desc}</p>
+                    </div>
+                `;
+                publicGrid.appendChild(card);
+
+                // Admin Gallery Mini Item
+                const mini = document.createElement('div');
+                mini.className = "relative rounded-lg overflow-hidden border border-slate-800 h-24 bg-navy-900 group";
+                mini.innerHTML = `
+                    <img src="${item.image}" alt="${item.title}" class="w-full h-full object-cover">
+                    <button type="button" onclick="deleteGalleryItem(${item.id})" class="absolute top-1 right-1 bg-red-600 text-white rounded-full w-5 h-5 flex items-center justify-center text-[10px] cursor-pointer">
+                        <i class="fa-solid fa-xmark"></i>
+                    </button>
+                `;
+                adminGrid.appendChild(mini);
+            });
+        }
+
+        function setStaffFilter(category, btn) {
+            activeFilter = category;
+            document.querySelectorAll('.filter-btn').forEach(b => {
+                b.className = "filter-btn bg-slate-100 hover:bg-slate-200 text-slate-700 font-medium px-3.5 py-1.5 rounded-lg text-xs transition-all cursor-pointer";
+            });
+            btn.className = "filter-btn active bg-navy-900 text-gold-400 font-bold px-3.5 py-1.5 rounded-lg text-xs transition-all border border-gold-500/30 cursor-pointer";
+            renderStaff();
+        }
+
+        function filterStaff() {
+            renderStaff();
+        }
+
+        // Update DOM elements with active school data & principal image
+        function updateDOMWithSchoolData() {
+            document.querySelectorAll('.school-title').forEach(el => el.innerText = schoolData.name);
+            document.querySelectorAll('.school-tagline').forEach(el => el.innerText = schoolData.tagline);
+            document.querySelectorAll('.emis-text').forEach(el => el.innerText = schoolData.emis);
+            document.querySelectorAll('.phone-text').forEach(el => el.innerText = schoolData.phone);
+            document.querySelectorAll('.email-text').forEach(el => {
+                el.innerText = schoolData.email;
+                // Any displayed school email opens a new email addressed to the school.
+                if (el.tagName.toLowerCase() === 'a') {
+                    el.href = `https://mail.google.com/mail/?view=cm&fs=1&to=${encodeURIComponent(schoolData.email)}`;
+                    el.removeAttribute('target');
+                }
+            });
+            document.querySelectorAll('.address-text').forEach(el => el.innerText = schoolData.address);
+
+            // Update phone and school email links everywhere they appear.
+            const cleanPhone = schoolData.phone.replace(/[^0-9]/g, '');
+            document.getElementById('topPhoneLink').href = `tel:${cleanPhone || '0544631921'}`;
+            document.getElementById('topEmailLink').href = `https://mail.google.com/mail/?view=cm&fs=1&to=${encodeURIComponent(schoolData.email)}`;
+            document.querySelectorAll('a.email-text').forEach(link => {
+                link.href = `https://mail.google.com/mail/?view=cm&fs=1&to=${encodeURIComponent(schoolData.email)}`;
+                link.setAttribute('aria-label', `Send email to ${schoolData.email}`);
+                link.title = `Email ${schoolData.email}`;
+            });
+
+            // Counters
+            document.getElementById('statStudents').innerText = schoolData.statStudents;
+            document.getElementById('statTeachers').innerText = schoolData.statTeachers;
+            document.getElementById('statCampus').innerText = schoolData.statCampus;
+            document.getElementById('statLabs').innerText = schoolData.statLabs;
+            document.getElementById('statPassRate').innerText = schoolData.statPassRate || "98%";
+
+            // Principal & Content
+            document.getElementById('principalNameText').innerText = schoolData.principalName;
+            document.getElementById('principalDesignationText').innerText = schoolData.principalDesig;
+            document.getElementById('principalMessageText').innerText = `"${schoolData.principalMsg}"`;
+            document.getElementById('tickerText').innerText = schoolData.ticker;
+            document.getElementById('docTitle').innerText = `${schoolData.name} | Official Portal`;
+
+            // Principal Image Rendering
+            const pImg = document.getElementById('principalImg');
+            const pIcon = document.getElementById('principalDefaultIcon');
+            if (principalPhotoBase64) {
+                pImg.src = principalPhotoBase64;
+                pImg.classList.remove('hidden');
+                pIcon.classList.add('hidden');
+            } else {
+                pImg.classList.add('hidden');
+                pIcon.classList.remove('hidden');
+            }
+        }
+
+        function convertPrincipalImageToBase64(fileInput) {
+            const file = fileInput.files[0];
+            if (file) {
+                const reader = new FileReader();
+                reader.onload = function(e) {
+                    principalPhotoBase64 = e.target.result;
+                };
+                reader.readAsDataURL(file);
+            }
+        }
+
+        // Secret Admin Access: Ctrl + Shift + A
+        document.addEventListener('keydown', function(e) {
+            if (e.ctrlKey && e.shiftKey && e.key.toLowerCase() === 'a') {
+                e.preventDefault();
+                openAdminModalDirect();
+            }
+        });
+
+        // Direct Admin Modal Access
+        function openAdminModalDirect() {
+            if (isAdminLoggedIn) {
+                openMasterAdminModal();
+            } else {
+                openModal('loginModal');
+            }
+        }
+
+        function openMasterAdminModal() {
+            document.getElementById('adminSchoolName').value = schoolData.name;
+            document.getElementById('adminTagline').value = schoolData.tagline;
+            document.getElementById('adminEmis').value = schoolData.emis;
+            document.getElementById('adminPhone').value = schoolData.phone;
+            document.getElementById('adminEmail').value = schoolData.email;
+            document.getElementById('adminAddress').value = schoolData.address;
+            
+            document.getElementById('adminStatStudents').value = schoolData.statStudents;
+            document.getElementById('adminStatTeachers').value = schoolData.statTeachers;
+            document.getElementById('adminStatCampus').value = schoolData.statCampus;
+            document.getElementById('adminStatLabs').value = schoolData.statLabs;
+            document.getElementById('adminStatPassRate').value = schoolData.statPassRate || "98%";
+
+            document.getElementById('adminPrincipalName').value = schoolData.principalName;
+            document.getElementById('adminPrincipalDesig').value = schoolData.principalDesig;
+            document.getElementById('adminPrincipalMsg').value = schoolData.principalMsg;
+            document.getElementById('adminTicker').value = schoolData.ticker;
+            document.getElementById('adminAttendanceDate').value = localDateString();
+            loadSchoolAdminExtras();
+            loadAttendanceEditor();
+
+            renderNotices();
+            renderGallery();
+            openModal('masterAdminModal');
+        }
+
+        function saveMasterSettings(e) {
+            e.preventDefault();
+            
+            // Passcode Change
+            const newPass = document.getElementById('adminNewPasscode').value;
+            if (newPass.trim() !== "") {
+                authPasscode = newPass.trim();
+                document.getElementById('adminNewPasscode').value = "";
+            }
+
+            schoolData.name = document.getElementById('adminSchoolName').value;
+            schoolData.tagline = document.getElementById('adminTagline').value;
+            schoolData.emis = document.getElementById('adminEmis').value;
+            schoolData.phone = document.getElementById('adminPhone').value;
+            schoolData.email = document.getElementById('adminEmail').value;
+            schoolData.address = document.getElementById('adminAddress').value;
+
+            schoolData.statStudents = document.getElementById('adminStatStudents').value;
+            schoolData.statTeachers = document.getElementById('adminStatTeachers').value;
+            schoolData.statCampus = document.getElementById('adminStatCampus').value;
+            schoolData.statLabs = document.getElementById('adminStatLabs').value;
+            schoolData.statPassRate = document.getElementById('adminStatPassRate').value;
+
+            schoolData.principalName = document.getElementById('adminPrincipalName').value;
+            schoolData.principalDesig = document.getElementById('adminPrincipalDesig').value;
+            schoolData.principalMsg = document.getElementById('adminPrincipalMsg').value;
+            schoolData.ticker = document.getElementById('adminTicker').value;
+
+            saveClassSummarySettings();
+            saveStateToStorage();
+            updateDOMWithSchoolData();
+            closeModal('masterAdminModal');
+        }
+
+        // Notices Admin Handlers
+        function openAddNoticeModal() {
+            openModal('addNoticeModal');
+        }
+
+        function saveNoticeItem(e) {
+            e.preventDefault();
+            const newNotice = {
+                id: Date.now(),
+                title: document.getElementById('noticeTitleInput').value,
+                date: document.getElementById('noticeDateInput').value,
+                badge: document.getElementById('noticeBadgeInput').value,
+                desc: document.getElementById('noticeDescInput').value
+            };
+            noticesList.unshift(newNotice);
+            saveStateToStorage();
+            renderNotices();
+            closeModal('addNoticeModal');
+            e.target.reset();
+        }
+
+        function deleteNotice(id) {
+            noticesList = noticesList.filter(n => n.id !== id);
+            saveStateToStorage();
+            renderNotices();
+        }
+
+        // Gallery Admin Handlers
+        function openAddGalleryModal() {
+            openModal('addGalleryModal');
+        }
+
+        function saveGalleryItem(e) {
+            e.preventDefault();
+            const fileInput = document.getElementById('galleryFileInput');
+            const title = document.getElementById('galleryTitleInput').value;
+            const desc = document.getElementById('galleryDescInput').value;
+
+            if (fileInput.files[0]) {
+                const reader = new FileReader();
+                reader.onload = function(evt) {
+                    const newItem = {
+                        id: Date.now(),
+                        title: title,
+                        desc: desc || "GHS THEKRIAN Campus Event",
+                        image: evt.target.result
+                    };
+                    galleryList.unshift(newItem);
+                    saveStateToStorage();
+                    renderGallery();
+                    closeModal('addGalleryModal');
+                    e.target.reset();
+                };
+                reader.readAsDataURL(fileInput.files[0]);
+            }
+        }
+
+        function deleteGalleryItem(id) {
+            galleryList = galleryList.filter(g => g.id !== id);
+            saveStateToStorage();
+            renderGallery();
+        }
+
+        // Staff Management
+        function openAddStaffModal() {
+            openModal('addStaffModal');
+        }
+
+        function addStaffMember(e) {
+            e.preventDefault();
+            const photoInput = document.getElementById('staffPhotoFileInput');
+            const newStaff = {
+                id: Date.now(),
+                name: document.getElementById('staffNameInput').value,
+                role: document.getElementById('staffRoleInput').value,
+                category: document.getElementById('staffCategoryInput').value,
+                subject: document.getElementById('staffSubjectInput').value,
+                qualification: document.getElementById('staffQualInput').value,
+                contact: document.getElementById('staffContactInput').value || 'staff@ghsdina.edu.pk',
+                photo: ""
+            };
+
+            if (photoInput.files[0]) {
+                const reader = new FileReader();
+                reader.onload = function(evt) {
+                    newStaff.photo = evt.target.result;
+                    staffList.unshift(newStaff);
+                    saveStateToStorage();
+                    renderStaff();
+                    closeModal('addStaffModal');
+                    e.target.reset();
+                };
+                reader.readAsDataURL(photoInput.files[0]);
+            } else {
+                staffList.unshift(newStaff);
+                saveStateToStorage();
+                renderStaff();
+                closeModal('addStaffModal');
+                e.target.reset();
+            }
+        }
+
+        function deleteStaffMember(id) {
+            if (confirm("Are you sure you want to delete this staff member?")) {
+                staffList = staffList.filter(s => s.id !== id);
+                saveStateToStorage();
+                renderStaff();
+            }
+        }
+
+        // Daily attendance is stored in this browser for the current laptop setup.
+        let attendanceData = {};
+        let attendanceDraft = [];
+        const DEFAULT_SCHOOL_CLASSES = ['Nursery','Prep','1st','2nd','3rd','4th','5th','6th','7th','8th','9th','10th'];
+        let schoolClasses = [...DEFAULT_SCHOOL_CLASSES];
+        let classAdminData = {};
+        let studentResults = [];
+        let classStudentLists = {};
+        let editingRosterIndex = -1;
+        function loadSchoolAdminExtras(){
+          // Always keep Nursery through 10th available, while preserving any owner-added classes.
+          try{
+            const savedClasses=JSON.parse(localStorage.getItem('ghs_school_classes')||'null');
+            if(Array.isArray(savedClasses)){
+              const merged=[...DEFAULT_SCHOOL_CLASSES];
+              savedClasses.forEach(c=>{if(typeof c==='string'&&c.trim()&&!merged.some(x=>x.toLowerCase()===c.trim().toLowerCase()))merged.push(c.trim());});
+              schoolClasses=merged;
+              localStorage.setItem('ghs_school_classes',JSON.stringify(schoolClasses));
+            } else { schoolClasses=[...DEFAULT_SCHOOL_CLASSES]; }
+          }catch(e){schoolClasses=[...DEFAULT_SCHOOL_CLASSES];}
+          try{classAdminData=JSON.parse(localStorage.getItem('ghs_class_admin_data')||'{}')||{};}catch(e){classAdminData={};}
+          try{studentResults=JSON.parse(localStorage.getItem('ghs_student_results')||'[]')||[];}catch(e){studentResults=[];}
+          try{classStudentLists=JSON.parse(localStorage.getItem('ghs_class_student_lists')||'{}')||{};}catch(e){classStudentLists={};}
+          schoolClasses.forEach(c=>{if(!classAdminData[c])classAdminData[c]={total:0,present:0,absent:0};});
+          renderClassSelectors();renderAdminClassList();renderClassStrength();renderClassSummarySettings();renderAdminResults();renderRosterClassSelector();renderRosterEditor();
+          const total=schoolClasses.reduce((a,c)=>a+Number((classAdminData[c]||{}).total||0),0);if(total>0){const el=document.getElementById('statStudents');if(el)el.textContent=total;}
+        }
+        function classLabel(c){const labels={'Nursery':'Nursery','Prep':'Prep','1st':'1st Class','2nd':'2nd Class','3rd':'3rd Class','4th':'4th Class','5th':'5th Class','6th':'6th Class','7th':'7th Class','8th':'8th Class','9th':'9th Class','10th':'10th Class'};return labels[c]||c;}
+        function renderClassSelectors(){
+          // Shared class list powers attendance, admin result upload, and public result search.
+          const configs=['publicAttendanceClass','adminAttendanceClass','resultAdminClass','examClass','rosterAdminClass'];
+          configs.forEach(id=>{
+            const el=document.getElementById(id);if(!el)return;
+            const old=el.value;
+            el.innerHTML=schoolClasses.map(c=>`<option value="${escapeAttendanceText(c)}">${escapeAttendanceText(classLabel(c))}</option>`).join('');
+            if(schoolClasses.includes(old))el.value=old;
+            else if(schoolClasses.includes('10th'))el.value='10th';
+            else if(schoolClasses.length)el.value=schoolClasses[0];
+          });
+        }
+        function renderAdminClassList(){const box=document.getElementById('adminClassList');if(!box)return;box.innerHTML=schoolClasses.map(c=>`<span class="inline-flex items-center gap-2 rounded-full border border-slate-700 bg-navy-950 px-3 py-1.5 text-xs text-white">${escapeAttendanceText(classLabel(c))}<button type="button" aria-label="Remove ${escapeAttendanceText(c)}" title="Remove class" onclick="removeSchoolClass('${String(c).replace(/'/g, "\'")}')" class="text-red-400 font-bold">×</button></span>`).join('');}
+        function addSchoolClass(){const input=document.getElementById('newClassName');const name=input.value.trim().replace(/\s+/g,' ');if(!name)return alert('Class ka naam likhein.');if(schoolClasses.some(c=>c.toLowerCase()===name.toLowerCase()))return alert('Yeh class pehle se maujood hai.');schoolClasses.push(name);localStorage.setItem('ghs_school_classes',JSON.stringify(schoolClasses));if(!classAdminData[name])classAdminData[name]={total:0,present:0,absent:0};localStorage.setItem('ghs_class_admin_data',JSON.stringify(classAdminData));input.value='';loadSchoolAdminExtras();loadAttendanceEditor();renderPublicAttendance();}
+        function removeSchoolClass(name){if(schoolClasses.length<=1)return alert('Kam az kam aik class rehni chahiye.');if(!confirm(`${name} class ko class list se remove karna hai? Is class ka saved data local storage mein rahega.`))return;schoolClasses=schoolClasses.filter(c=>c!==name);localStorage.setItem('ghs_school_classes',JSON.stringify(schoolClasses));loadSchoolAdminExtras();loadAttendanceEditor();renderPublicAttendance();}
+
+
+        function localDateString() {
+            const d = new Date();
+            return `${d.getFullYear()}-${String(d.getMonth()+1).padStart(2,'0')}-${String(d.getDate()).padStart(2,'0')}`;
+        }
+        function attendanceKey(className, date) { return `${className}|${date}`; }
+        function loadAttendanceData() {
+            try { attendanceData = JSON.parse(localStorage.getItem('ghs_attendance_data') || '{}') || {}; }
+            catch (e) { attendanceData = {}; }
+        }
+        function renderPublicAttendance() {
+            const classEl = document.getElementById('publicAttendanceClass');
+            const dateEl = document.getElementById('publicAttendanceDate');
+            const summary = document.getElementById('publicAttendanceSummary');
+            const lists = document.getElementById('publicAttendanceLists');
+            if (!classEl || !dateEl || !summary || !lists) return;
+            const cls = classEl.value;
+            const date = dateEl.value || localDateString();
+            const records = attendanceData[attendanceKey(cls, date)] || [];
+            const present = records.filter(x => x.status === 'Present');
+            const absent = records.filter(x => x.status === 'Absent');
+            const configured = classAdminData[cls] || {};
+            const presentCount = configured.present !== undefined ? Number(configured.present) : present.length;
+            const absentCount = configured.absent !== undefined ? Number(configured.absent) : absent.length;
+            const stat = (label, count, icon, color) => `<div class="rounded-xl border ${color} p-4 flex items-center justify-between"><div><p class="text-xs font-semibold uppercase tracking-wide opacity-80">${label}</p><p class="text-2xl font-extrabold mt-1">${count}</p></div><i class="fa-solid ${icon} text-2xl opacity-70"></i></div>`;
+            const totalStrength = Number(configured.total || (classStudentLists[cls] || []).length || 0);
+            summary.innerHTML = stat('Total Strength', totalStrength, 'fa-users', 'border-slate-200 bg-slate-50 text-slate-700') + stat('Present Students', presentCount, 'fa-user-check', 'border-emerald-200 bg-emerald-50 text-emerald-800') + stat('Absent Students', absentCount, 'fa-user-xmark', 'border-red-200 bg-red-50 text-red-800');
+            if (!records.length) {
+                lists.innerHTML = `<div class="lg:col-span-2 rounded-xl border border-slate-200 bg-slate-50 p-8 text-center text-slate-500"><i class="fa-regular fa-calendar-xmark text-3xl mb-2"></i><p class="font-semibold">No attendance record found</p><p class="text-sm mt-1">No list has been saved for ${escapeAttendanceText(cls)} on ${escapeAttendanceText(date)}.</p></div>`;
+                return;
+            }
+            const renderList = (title, rows, color, icon) => `<div class="rounded-xl border border-slate-200 overflow-hidden"><div class="${color} px-4 py-3 font-bold flex items-center justify-between"><span><i class="fa-solid ${icon} mr-2"></i>${title}</span><span class="rounded-full bg-white/70 px-2.5 py-0.5 text-sm">${rows.length}</span></div><div class="divide-y divide-slate-100">${rows.length ? rows.map((x,i) => `<div class="px-4 py-3 flex items-center justify-between gap-3"><div class="min-w-0"><p class="font-semibold text-slate-800 text-sm">${escapeAttendanceText(x.name)}</p><p class="text-xs text-slate-500">Roll No: ${escapeAttendanceText(x.roll || '—')}</p></div><span class="text-xs font-bold">${i+1}</span></div>`).join('') : '<p class="p-5 text-sm text-slate-400 text-center">No students in this list.</p>'}</div></div>`;
+            lists.innerHTML = renderList('Present Students', present, 'bg-emerald-50 text-emerald-800', 'fa-circle-check') + renderList('Absent Students', absent, 'bg-red-50 text-red-800', 'fa-circle-xmark');
+        }
+        function escapeAttendanceText(value) {
+            return String(value == null ? '' : value).replace(/[&<>"']/g, ch => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[ch]));
+        }
+        function loadAttendanceEditor() {
+            const cls = document.getElementById('adminAttendanceClass').value;
+            const date = document.getElementById('adminAttendanceDate').value || localDateString();
+            attendanceDraft = (attendanceData[attendanceKey(cls, date)] || []).map(x => ({...x}));
+            renderAttendanceEditor();
+        }
+        function renderAttendanceEditor() {
+            const box = document.getElementById('attendanceEditorList');
+            if (!box) return;
+            if (!attendanceDraft.length) {
+                box.innerHTML = '<p class="text-xs text-slate-500 text-center py-3">No students added for this class/date.</p>';
+                return;
+            }
+            box.innerHTML = attendanceDraft.map((student, index) => `<div class="grid grid-cols-1 sm:grid-cols-[1fr_100px_130px_36px] gap-2 items-center rounded-lg border border-slate-800 p-2.5"><div class="min-w-0"><p class="text-sm font-semibold text-white break-words">${escapeAttendanceText(student.name)}</p><p class="text-[10px] text-slate-400">Roll No: ${escapeAttendanceText(student.roll || '—')}</p></div><span class="text-[10px] text-slate-400">Student ${index+1}</span><select aria-label="Attendance status" onchange="changeAttendanceStatus(${index}, this.value)" class="rounded bg-navy-900 border border-slate-700 p-2 text-xs text-white"><option value="Present" ${student.status==='Present'?'selected':''}>Present</option><option value="Absent" ${student.status==='Absent'?'selected':''}>Absent</option></select><button type="button" onclick="removeAttendanceStudent(${index})" title="Remove student" class="text-red-400 hover:text-red-300 p-2 cursor-pointer"><i class="fa-solid fa-trash"></i></button></div>`).join('');
+        }
+        function showAttendanceEditorMessage(message, success) {
+            const el = document.getElementById('attendanceEditorMessage');
+            el.textContent = message;
+            el.className = `rounded-lg p-3 text-xs font-semibold ${success ? 'bg-emerald-900/50 text-emerald-300 border border-emerald-700' : 'bg-red-900/50 text-red-300 border border-red-700'}`;
+        }
+        function addAttendanceStudent() {
+            const nameEl = document.getElementById('attendanceNameInput');
+            const rollEl = document.getElementById('attendanceRollInput');
+            const name = nameEl.value.trim();
+            const roll = rollEl.value.trim();
+            if (!name) { showAttendanceEditorMessage('Please enter the student name first.', false); nameEl.focus(); return; }
+            if (attendanceDraft.some(x => x.name.toLowerCase() === name.toLowerCase() && x.roll === roll)) {
+                showAttendanceEditorMessage('This student is already in the list. Edit their status instead.', false); return;
+            }
+            attendanceDraft.push({ name, roll, status: document.getElementById('attendanceStatusInput').value });
+            nameEl.value = ''; rollEl.value = '';
+            document.getElementById('attendanceEditorMessage').className = 'hidden';
+            renderAttendanceEditor();
+            nameEl.focus();
+        }
+        function changeAttendanceStatus(index, status) {
+            if (attendanceDraft[index]) attendanceDraft[index].status = status;
+        }
+        function removeAttendanceStudent(index) {
+            attendanceDraft.splice(index, 1);
+            renderAttendanceEditor();
+        }
+        function saveAttendanceRecords() {
+            const cls = document.getElementById('adminAttendanceClass').value;
+            const date = document.getElementById('adminAttendanceDate').value || localDateString();
+            if (!date) { showAttendanceEditorMessage('Please select the attendance date.', false); return; }
+            attendanceData[attendanceKey(cls, date)] = attendanceDraft.map(x => ({name:x.name, roll:x.roll, status:x.status}));
+            classAdminData[cls] = {...(classAdminData[cls]||{}), present:attendanceDraft.filter(x=>x.status==='Present').length, absent:attendanceDraft.filter(x=>x.status==='Absent').length};
+            localStorage.setItem('ghs_class_admin_data', JSON.stringify(classAdminData));
+            try {
+                localStorage.setItem('ghs_attendance_data', JSON.stringify(attendanceData));
+                const publicClass = document.getElementById('publicAttendanceClass');
+                const publicDate = document.getElementById('publicAttendanceDate');
+                if (publicClass) publicClass.value = cls;
+                if (publicDate) publicDate.value = date;
+                showAttendanceEditorMessage(`Attendance saved for ${cls} on ${date}.`, true);
+                renderPublicAttendance();
+            } catch (err) {
+                showAttendanceEditorMessage('Could not save. Browser storage may be full; try removing large stored photos.', false);
+            }
+        }
+
+        // Login Handler using Passcode
+        function handlePortalLogin(e) {
+            e.preventDefault();
+            const user = document.getElementById('loginUsername').value.trim();
+            const pass = document.getElementById('loginPassword').value;
+            const err = document.getElementById('loginErrorMsg');
+
+            if (user === "syedrazi" && pass === authPasscode) {
+                err.classList.add('hidden');
+                isAdminLoggedIn = true;
+                
+                // Reset/Clear Login Input Fields
+                document.getElementById('loginUsername').value = "";
+                document.getElementById('loginPassword').value = "";
+
+                closeModal('loginModal');
+                renderStaff();
+                openMasterAdminModal();
+            } else {
+                err.classList.remove('hidden');
+            }
+        }
+
+        function logoutAdmin() {
+            isAdminLoggedIn = false;
+            // Clear input fields
+            document.getElementById('loginUsername').value = "";
+            document.getElementById('loginPassword').value = "";
+            renderStaff();
+            closeModal('masterAdminModal');
+        }
+
+        // Contact Form Submission via EmailJS
+        async function handleContactSubmit(e) {
+            e.preventDefault();
+            const form = e.target;
+            const msg = document.getElementById('contactSuccessMsg');
+            const submitBtn = form.querySelector('button[type="submit"]');
+            const originalButtonHTML = submitBtn.innerHTML;
+            submitBtn.disabled = true;
+            submitBtn.innerHTML = '<i class="fa-solid fa-spinner fa-spin"></i> Sending...';
+            msg.classList.add('hidden');
+            try {
+                if (!window.emailjs) throw new Error('Email service did not load. Please check your internet connection.');
+                const templateParams = {
+                    name: document.getElementById('contactName').value.trim(),
+                    phone: document.getElementById('contactPhone').value.trim(),
+                    email: document.getElementById('contactEmail').value.trim() || 'Not provided',
+                    inquiry_type: document.getElementById('contactInquiryType').value,
+                    message: document.getElementById('contactMessage').value.trim(),
+                    to_email: 'ghsdina@gmail.com'
+                };
+                await emailjs.send('service_s7yev2g', 'template_x6kj795', templateParams);
+                msg.innerHTML = '<i class="fa-solid fa-circle-check text-green-400 mr-1"></i> Your inquiry has been sent successfully to the school administration.';
+                msg.classList.remove('hidden');
+                form.reset();
+            } catch (error) {
+                console.error('EmailJS send failed:', error);
+                msg.innerHTML = '<i class="fa-solid fa-circle-exclamation text-red-400 mr-1"></i> Email could not be sent. Please try again or email ghsdina@gmail.com directly.';
+                msg.classList.remove('hidden');
+            } finally {
+                submitBtn.disabled = false;
+                submitBtn.innerHTML = originalButtonHTML;
+                setTimeout(() => { msg.classList.add('hidden'); }, 8000);
+            }
+        }
+
+        // Admin-managed result database (local to this laptop/browser for now)
+        function saveStudentResult(){
+          const name=document.getElementById('resultAdminName').value.trim(), roll=document.getElementById('resultAdminRoll').value.trim(), cls=document.getElementById('resultAdminClass').value, year=document.getElementById('resultAdminYear').value.trim()||'2026', raw=document.getElementById('resultAdminSubjects').value.trim();
+          if(!name||!roll||!raw){document.getElementById('resultAdminMessage').textContent='Name, roll number aur subject marks fill karein.';return;}
+          const subjects=raw.split(',').map(part=>{const i=part.lastIndexOf(':');return i<0?null:{name:part.slice(0,i).trim(),marks:Number(part.slice(i+1).trim())};}).filter(x=>x&&x.name&&Number.isFinite(x.marks));
+          if(!subjects.length){document.getElementById('resultAdminMessage').textContent='Subject marks is format mein likhein: English:75, Urdu:80';return;}
+          const result={name,roll,cls,year,subjects,total:subjects.reduce((a,x)=>a+x.marks,0),maximum:subjects.length*100};
+          const idx=studentResults.findIndex(x=>x.roll.toLowerCase()===roll.toLowerCase()&&x.cls===cls&&x.year===year); if(idx>=0)studentResults[idx]=result;else studentResults.push(result);
+          localStorage.setItem('ghs_student_results',JSON.stringify(studentResults)); document.getElementById('resultAdminMessage').textContent='Result saved successfully.'; renderAdminResults();
+        }
+        function clearResultEditor(){['resultAdminName','resultAdminRoll','resultAdminSubjects'].forEach(id=>document.getElementById(id).value='');document.getElementById('resultAdminMessage').textContent='';}
+        function renderAdminResults(){const box=document.getElementById('adminResultsList');if(!box)return;box.innerHTML=studentResults.length?studentResults.map((r,i)=>`<div class="flex flex-wrap items-center justify-between gap-2 bg-navy-950 border border-slate-700 rounded-lg p-2 text-xs text-white"><span>${escapeAttendanceText(r.name)} · Roll ${escapeAttendanceText(r.roll)} · ${r.cls} · ${r.year}</span><button type="button" onclick="editStudentResult(${i})" class="text-gold-400 font-bold">Edit</button><button type="button" onclick="deleteStudentResult(${i})" class="text-red-400 font-bold">Delete</button></div>`).join(''):'<p class="text-xs text-slate-500">No results uploaded yet.</p>';}
+        function editStudentResult(i){const r=studentResults[i];if(!r)return;document.getElementById('resultAdminName').value=r.name;document.getElementById('resultAdminRoll').value=r.roll;document.getElementById('resultAdminClass').value=r.cls;document.getElementById('resultAdminYear').value=r.year;document.getElementById('resultAdminSubjects').value=r.subjects.map(x=>`${x.name}:${x.marks}`).join(', ');}
+        function deleteStudentResult(i){studentResults.splice(i,1);localStorage.setItem('ghs_student_results',JSON.stringify(studentResults));renderAdminResults();}
+        function searchResult(e){e.preventDefault();const query=document.getElementById('rollNoInput').value.trim().toLowerCase(), cls=document.getElementById('examClass').value, year=document.getElementById('examYear').value;const r=studentResults.find(x=>(x.roll.toLowerCase()===query||x.name.toLowerCase().includes(query))&&x.cls===cls&&String(x.year)===String(year));const out=document.getElementById('resultOutput');if(!r){out.classList.remove('hidden');document.getElementById('resName').innerText='Result not found';document.getElementById('resRoll').innerText='—';document.getElementById('resMarks').innerText='—';document.getElementById('resGrade').innerText='—';document.getElementById('resSubjects').innerHTML='<p class="text-red-600 font-semibold">No uploaded result matches this name/roll number, class and session.</p>';return;}const pct=r.maximum?Math.round(r.total/r.maximum*100):0;document.getElementById('resName').innerText=r.name;document.getElementById('resRoll').innerText=r.roll;document.getElementById('resMarks').innerText=`${r.total} / ${r.maximum}`;document.getElementById('resGrade').innerText=pct>=80?'A+':pct>=70?'A':pct>=60?'B':pct>=50?'C':pct>=40?'D':'Needs Improvement';document.getElementById('resBadge').innerText=pct>=40?'RESULT':'NEEDS IMPROVEMENT';document.getElementById('resSubjects').innerHTML='<h5 class="font-bold text-navy-900">Subject-wise Marks</h5>'+r.subjects.map(x=>`<div class="flex justify-between border-b border-slate-200 py-1"><span>${escapeAttendanceText(x.name)}</span><strong>${x.marks} / 100</strong></div>`).join('');out.classList.remove('hidden');out.scrollIntoView({behavior:'smooth',block:'nearest'});}
+        function printStudentResult(){const out=document.getElementById('resultOutput');if(out&&!out.classList.contains('hidden'))window.print();}
+        function renderClassStrength(){
+          const grid=document.getElementById('publicClassStrengthGrid');if(!grid)return;
+          grid.innerHTML=schoolClasses.map(c=>`<button type="button" onclick="showClassStudentList('${String(c).replace(/'/g, "\'")}')" class="rounded-xl border border-slate-200 bg-slate-50 p-5 text-center hover:border-amber-500 hover:shadow-md transition w-full"><p class="text-xs uppercase tracking-wide text-slate-500">Class</p><h3 class="text-xl font-bold text-navy-900">${escapeAttendanceText(classLabel(c))}</h3><p class="text-3xl font-extrabold text-amber-600 mt-2">${Number((classAdminData[c]||{}).total||((classStudentLists[c]||[]).length)||0)}</p><p class="text-xs text-slate-500">Total Students</p><p class="text-xs text-amber-700 mt-2 font-semibold">Click to view student list</p></button>`).join('');
+        }
+        function openClassStrength(){const sec=document.getElementById('classStrengthDetails');renderClassStrength();sec.classList.remove('hidden');sec.scrollIntoView({behavior:'smooth',block:'start'});}
+        function showClassStudentList(cls){
+          const box=document.getElementById('publicClassStudentDetails');if(!box)return;
+          const students=classStudentLists[cls]||[];
+          box.classList.remove('hidden');
+          box.innerHTML=`<div class="flex items-center justify-between gap-3 mb-4"><div><h3 class="text-xl font-bold text-navy-900">${escapeAttendanceText(classLabel(cls))} — Student List</h3><p class="text-sm text-slate-600">Total enrolled: ${Number((classAdminData[cls]||{}).total||students.length||0)} · Listed students: ${students.length}</p></div><button type="button" onclick="document.getElementById('publicClassStudentDetails').classList.add('hidden')" class="rounded-lg bg-navy-900 text-white px-3 py-2 text-sm">Close</button></div>${students.length?`<div class="overflow-x-auto"><table class="w-full text-sm"><thead><tr class="bg-slate-100 text-left"><th class="p-3">#</th><th class="p-3">Student Name</th><th class="p-3">Roll Number</th></tr></thead><tbody>${students.map((st,i)=>`<tr class="border-t border-slate-100"><td class="p-3">${i+1}</td><td class="p-3 font-medium">${escapeAttendanceText(st.name)}</td><td class="p-3">${escapeAttendanceText(st.roll||'—')}</td></tr>`).join('')}</tbody></table></div>`:'<p class="rounded-lg bg-slate-50 p-5 text-sm text-slate-500">Is class ki student list abhi admin ne add nahi ki.</p>'}`;
+          box.scrollIntoView({behavior:'smooth',block:'nearest'});
+        }
+        function renderClassSummarySettings(){const box=document.getElementById('adminClassSummarySettings');if(!box)return;box.innerHTML=schoolClasses.map(c=>{const d=classAdminData[c]||{};return `<div class="rounded-xl border border-slate-700 bg-navy-950 p-3"><h5 class="text-sm font-bold text-white mb-2">${escapeAttendanceText(classLabel(c))} Class</h5><div class="grid grid-cols-3 gap-2"><label class="text-[10px] text-slate-300">Total<input id="strength_${c}" type="number" min="0" value="${Number(d.total||0)}" class="mt-1 w-full rounded bg-navy-900 border border-slate-700 p-2 text-white"></label><label class="text-[10px] text-slate-300">Present<input id="present_${c}" type="number" min="0" value="${Number(d.present||0)}" class="mt-1 w-full rounded bg-navy-900 border border-slate-700 p-2 text-white"></label><label class="text-[10px] text-slate-300">Absent<input id="absent_${c}" type="number" min="0" value="${Number(d.absent||0)}" class="mt-1 w-full rounded bg-navy-900 border border-slate-700 p-2 text-white"></label></div></div>`}).join('');}
+        function saveClassSummarySettings(){schoolClasses.forEach(c=>{classAdminData[c]={total:Number(document.getElementById('strength_'+c).value||0),present:Number(document.getElementById('present_'+c).value||0),absent:Number(document.getElementById('absent_'+c).value||0)};});localStorage.setItem('ghs_class_admin_data',JSON.stringify(classAdminData));const total=schoolClasses.reduce((a,c)=>a+Number(classAdminData[c].total||0),0);if(total>0){schoolData.statStudents=String(total);const stat=document.getElementById('statStudents');if(stat)stat.textContent=total;}renderClassStrength();renderPublicAttendance();}
+        function renderRosterClassSelector(){const el=document.getElementById('rosterAdminClass');if(!el)return;const old=el.value;el.innerHTML=schoolClasses.map(c=>`<option value="${escapeAttendanceText(c)}">${escapeAttendanceText(classLabel(c))}</option>`).join('');if(schoolClasses.includes(old))el.value=old;}
+        function renderRosterEditor(){const cls=document.getElementById('rosterAdminClass')?.value;const box=document.getElementById('adminRosterList');if(!box||!cls)return;const students=classStudentLists[cls]||[];box.innerHTML=students.length?students.map((st,i)=>`<div class="flex flex-wrap items-center justify-between gap-2 bg-navy-950 border border-slate-700 rounded-lg p-3 text-xs text-white"><span>${i+1}. ${escapeAttendanceText(st.name)} · Roll No: ${escapeAttendanceText(st.roll||'—')}</span><span class="flex gap-3"><button type="button" onclick="editRosterStudent(${i})" class="text-gold-400 font-bold">Edit</button><button type="button" onclick="deleteRosterStudent(${i})" class="text-red-400 font-bold">Delete</button></span></div>`).join(''):'<p class="text-xs text-slate-500">Is class ki list abhi khaali hai.</p>';}
+        function saveRosterStudent(){const cls=document.getElementById('rosterAdminClass').value,name=document.getElementById('rosterStudentName').value.trim(),roll=document.getElementById('rosterStudentRoll').value.trim();if(!name||!roll){document.getElementById('rosterEditorMessage').textContent='Student ka naam aur roll number dono enter karein.';return;}if(!classStudentLists[cls])classStudentLists[cls]=[];const list=classStudentLists[cls];if(editingRosterIndex>=0&&list[editingRosterIndex]){list[editingRosterIndex]={name,roll};}else{if(list.some(x=>String(x.roll).toLowerCase()===roll.toLowerCase())){document.getElementById('rosterEditorMessage').textContent='Is class mein yeh roll number pehle se hai.';return;}list.push({name,roll});}localStorage.setItem('ghs_class_student_lists',JSON.stringify(classStudentLists));if(!Number((classAdminData[cls]||{}).total||0)){classAdminData[cls]={...(classAdminData[cls]||{}),total:list.length};localStorage.setItem('ghs_class_admin_data',JSON.stringify(classAdminData));}editingRosterIndex=-1;clearRosterEditor();document.getElementById('rosterEditorMessage').textContent='Student list saved.';renderRosterEditor();renderClassStrength();renderPublicAttendance();}
+        function editRosterStudent(i){const cls=document.getElementById('rosterAdminClass').value,st=(classStudentLists[cls]||[])[i];if(!st)return;editingRosterIndex=i;document.getElementById('rosterStudentName').value=st.name;document.getElementById('rosterStudentRoll').value=st.roll;document.getElementById('rosterEditorMessage').textContent='Editing student. Changes save when you click Add / Save Student.';}
+        function deleteRosterStudent(i){const cls=document.getElementById('rosterAdminClass').value;if(!confirm('Is student ko class list se delete karna hai?'))return;classStudentLists[cls].splice(i,1);localStorage.setItem('ghs_class_student_lists',JSON.stringify(classStudentLists));renderRosterEditor();renderClassStrength();renderPublicAttendance();}
+        function clearRosterEditor(){editingRosterIndex=-1;document.getElementById('rosterStudentName').value='';document.getElementById('rosterStudentRoll').value='';}
+
+
+        // Mobile Navigation Drawer Toggle
+        function toggleMobileMenu() {
+            const menu = document.getElementById('mobileMenu');
+            const icon = document.getElementById('menuIcon');
+            menu.classList.toggle('hidden');
+            if(menu.classList.contains('hidden')) {
+                icon.className = "fa-solid fa-bars text-2xl";
+            } else {
+                icon.className = "fa-solid fa-xmark text-2xl";
+            }
+        }
+
+        function openModal(id) {
+            document.getElementById(id).classList.remove('hidden');
+        }
+
+        function closeModal(id) {
+            // Closing the admin dashboard logs the admin out, so the next access requires login again.
+            if (id === 'masterAdminModal') {
+                isAdminLoggedIn = false;
+            }
+            // Reset credentials when login modal is closed
+            if (id === 'loginModal') {
+                document.getElementById('loginUsername').value = "";
+                document.getElementById('loginPassword').value = "";
+                document.getElementById('loginErrorMsg').classList.add('hidden');
+            }
+            document.getElementById(id).classList.add('hidden');
+        }
+
+        // Hidden Admin Access: Ctrl + Shift + A
+        document.addEventListener("keydown", function(e) {
+            if (e.ctrlKey && e.shiftKey && e.key.toLowerCase() === "a") {
+                e.preventDefault();
+                openModal("loginModal");
+                setTimeout(() => document.getElementById("loginPassword")?.focus(), 100);
+            }
+        });
+
+        window.onload = function() {
+            loadSavedState();
+            loadAttendanceData();
+            loadSchoolAdminExtras();
+            const today = localDateString();
+            document.getElementById('publicAttendanceDate').value = today;
+            document.getElementById('adminAttendanceDate').value = today;
+            renderPublicAttendance();
+            renderStaff();
+            renderNotices();
+            renderGallery();
+            updateDOMWithSchoolData();
+        };
+    </script>
+</body>
+</html>
