@@ -115,8 +115,9 @@
                 
                 <!-- School Logo & Title -->
                 <a href="#home" class="flex items-center gap-3 group">
-                    <div class="w-12 h-12 rounded-full bg-navy-800 border-2 border-gold-400 flex items-center justify-center text-gold-400 font-bold text-xl shadow-md group-hover:scale-105 transition-transform">
-                        <i class="fa-solid fa-graduation-cap"></i>
+                    <div id="schoolLogoDisplay" class="w-12 h-12 rounded-full bg-navy-800 border-2 border-gold-400 flex items-center justify-center text-gold-400 font-bold text-xl shadow-md group-hover:scale-105 transition-transform overflow-hidden shrink-0">
+                        <i id="schoolLogoDefaultIcon" class="fa-solid fa-graduation-cap"></i>
+                        <img id="schoolLogoImage" alt="School Logo" class="hidden w-full h-full object-cover">
                     </div>
                     <div>
                         <h1 class="school-title font-serif font-bold text-base sm:text-xl text-white tracking-wide group-hover:text-gold-300 transition-colors">
@@ -751,6 +752,23 @@
                         <div>
                             <label class="block text-xs text-slate-300 font-semibold mb-1">Campus Physical Address</label>
                             <input type="text" id="adminAddress" class="w-full rounded-lg bg-navy-950 border border-slate-800 p-2.5 text-sm text-white focus:border-gold-500 outline-none" required>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Section 2A: School Logo Upload -->
+                <div class="space-y-3 bg-navy-950 p-4 rounded-xl border border-gold-500/30">
+                    <h4 class="text-xs font-bold text-gold-400 uppercase tracking-wider">School Logo</h4>
+                    <div class="flex flex-col sm:flex-row sm:items-center gap-4">
+                        <div class="w-20 h-20 rounded-full border-2 border-gold-400 bg-navy-900 flex items-center justify-center overflow-hidden shrink-0">
+                            <i id="adminSchoolLogoDefaultIcon" class="fa-solid fa-graduation-cap text-2xl text-gold-400"></i>
+                            <img id="adminSchoolLogoPreview" alt="School logo preview" class="hidden w-full h-full object-cover">
+                        </div>
+                        <div class="flex-1 space-y-2">
+                            <label class="block text-xs text-slate-300 font-semibold mb-1">Upload / Change School Logo</label>
+                            <input type="file" id="adminSchoolLogoFile" accept="image/*" onchange="setSchoolLogoFromSettings(this)" class="w-full rounded-lg bg-navy-900 border border-slate-700 p-2 text-xs text-slate-300">
+                            <button type="button" onclick="removeSchoolLogoFromSettings()" class="px-3 py-2 rounded-lg bg-red-900/60 hover:bg-red-800 text-red-200 text-xs font-semibold">Remove Logo</button>
+                            <p class="text-[10px] text-slate-400">Image logo will appear beside the school name. It is saved in this browser.</p>
                         </div>
                     </div>
                 </div>
@@ -1478,6 +1496,66 @@
             }
         }
 
+        function applySchoolLogo() {
+            let logo = '';
+            try { logo = localStorage.getItem('ghs_school_logo') || ''; } catch (e) {}
+            const image = document.getElementById('schoolLogoImage');
+            const icon = document.getElementById('schoolLogoDefaultIcon');
+            const preview = document.getElementById('adminSchoolLogoPreview');
+            const previewIcon = document.getElementById('adminSchoolLogoDefaultIcon');
+            if (image) {
+                if (logo) { image.src = logo; image.classList.remove('hidden'); if (icon) icon.classList.add('hidden'); }
+                else { image.removeAttribute('src'); image.classList.add('hidden'); if (icon) icon.classList.remove('hidden'); }
+            }
+            if (preview) {
+                if (logo) { preview.src = logo; preview.classList.remove('hidden'); if (previewIcon) previewIcon.classList.add('hidden'); }
+                else { preview.removeAttribute('src'); preview.classList.add('hidden'); if (previewIcon) previewIcon.classList.remove('hidden'); }
+            }
+        }
+
+        function setSchoolLogoFromSettings(input) {
+            const file = input && input.files && input.files[0];
+            if (!file) return;
+            if (!file.type || !file.type.startsWith('image/')) {
+                alert('Please select a valid image file.');
+                input.value = '';
+                return;
+            }
+            const reader = new FileReader();
+            reader.onload = function(event) {
+                const img = new Image();
+                img.onload = function() {
+                    const maxSize = 600;
+                    const scale = Math.min(1, maxSize / Math.max(img.width, img.height));
+                    const canvas = document.createElement('canvas');
+                    canvas.width = Math.max(1, Math.round(img.width * scale));
+                    canvas.height = Math.max(1, Math.round(img.height * scale));
+                    const ctx = canvas.getContext('2d');
+                    ctx.drawImage(img, 0, 0, canvas.width, canvas.height);
+                    const logoData = canvas.toDataURL('image/jpeg', 0.82);
+                    try {
+                        localStorage.setItem('ghs_school_logo', logoData);
+                        applySchoolLogo();
+                        alert('School logo updated successfully.');
+                    } catch (err) {
+                        alert('Logo save nahi ho saka. Chhoti image select karein ya browser storage clear karein.');
+                    }
+                };
+                img.onerror = function() { alert('Image open nahi ho saki. Doosri image try karein.'); };
+                img.src = event.target.result;
+            };
+            reader.onerror = function() { alert('Image read nahi ho saki. Dobara try karein.'); };
+            reader.readAsDataURL(file);
+        }
+
+        function removeSchoolLogoFromSettings() {
+            try { localStorage.removeItem('ghs_school_logo'); } catch (e) {}
+            const input = document.getElementById('adminSchoolLogoFile');
+            if (input) input.value = '';
+            applySchoolLogo();
+            alert('School logo removed.');
+        }
+
         function openMasterAdminModal() {
             document.getElementById('adminSchoolName').value = schoolData.name;
             document.getElementById('adminTagline').value = schoolData.tagline;
@@ -1499,6 +1577,7 @@
             document.getElementById('adminAttendanceDate').value = localDateString();
             loadSchoolAdminExtras();
             loadAttendanceEditor();
+            applySchoolLogo();
 
             renderNotices();
             renderGallery();
@@ -1948,6 +2027,7 @@
             renderNotices();
             renderGallery();
             updateDOMWithSchoolData();
+            applySchoolLogo();
         };
     </script>
 </body>
